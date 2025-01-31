@@ -1,75 +1,79 @@
-/* Basic Reset */
-body, html {
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    display: flex;
-    height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    width: 250px; /* Adjust width as needed */
-    height: 100%;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 20px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar ul li {
-    padding: 15px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
     text-align: center;
 }
 
-.sidebar ul li a {
+/* Navigation bar */
+nav {
+    background: #333;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    display: block;
+    font-size: 18px;
     padding: 10px;
+    transition: color 0.3s;
 }
 
-.sidebar ul li a:hover {
-    background-color: #575757;
+nav ul li a:hover {
+    color: #ffcc00;
 }
 
-/* Main Content Area */
-main {
-    margin-left: 250px; /* Offset by sidebar width */
+/* Hero section */
+#hero {
+    padding: 50px 20px;
+    background: #0073e6;
+    color: white;
+}
+
+/* Project grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 20px;
-    flex: 1;
-    overflow: auto;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px; /* Slightly smaller on tablets */
-    }
-    
-    main {
-        margin-left: 200px;
-    }
+.project-item {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-@media (max-width: 480px) {
-    .sidebar {
-        width: 100px; /* Collapse for smaller screens */
-    }
+.project-item:hover {
+    transform: scale(1.05);
+}
 
-    .sidebar ul li a {
-        font-size: 14px;
-        padding: 5px;
-    }
+.project-item img {
+    width: 100%;
+    border-radius: 8px;
+}
 
-    main {
-        margin-left: 100px;
-    }
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
 }
