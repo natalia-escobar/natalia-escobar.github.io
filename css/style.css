@@ -94,32 +94,38 @@ footer {
     width: 80%;
     max-width: 600px;
     background: #fff;
-    padding: 20px;
+    padding: 20px 25px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     position: relative;
     transform: rotate(-2deg); /* Slight tilt for a casual, handmade effect */
     transition: transform 0.3s ease;
+    line-height: 1.8; /* Adjust for proper spacing */
+    
+    /* Lined Paper Effect */
+    background: repeating-linear-gradient(
+        to bottom,
+        #fff 0px,
+        #fff 28px,  /* Space between lines */
+        rgba(0, 0, 0, 0.1) 29px  /* Light grayish line */
+    );
+    border-top: 10px solid #e74c3c; /* Red margin line at the top */
+    padding-top: 15px; /* Adjust for margin line */
 }
 
 .journal-entry:hover {
     transform: rotate(0deg) scale(1.02); /* Slight lift on hover */
 }
 
-.journal-entry img {
-    width: 100%;
-    border-radius: 5px;
+/* Optional: Add a little margin line on the left like real paper */
+.journal-entry::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 3px;
+    height: 100%;
+    background: #e74c3c; /* Red margin line */
 }
 
-.entry-text {
-    font-family: "ff-providence-sans-web-pro", sans-serif; /* Example handwritten font */
-    text-align: center;
-    color: #333;
-}
-
-.entry-text h3 {
-    font-family: "ff-providence-sans-web-pro", cursive;
-    font-size: 1.5em;
-    margin-top: 10px;
-}
 
