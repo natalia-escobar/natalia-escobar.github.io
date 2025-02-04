@@ -78,58 +78,54 @@ footer {
     margin-top: 20px;
 }
 
-#projects-preview {
-    padding: 50px 20px;
-    background-color: #f9f9f9; /* Light paper-like background */
-}
-
-.journal-entries {
+.envelope-container {
     display: flex;
-    flex-direction: column;
     gap: 20px;
-    align-items: center;
 }
 
-.journal-entry {
-    width: 80%;
-    max-width: 600px;
-    background: #fff;
-    padding: 20px 25px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.envelope {
+    width: 200px;
+    height: 130px;
     position: relative;
-    transform: rotate(-2deg); /* Slight tilt for a casual, handmade effect */
-    transition: transform 0.3s ease;
-    line-height: 1.8; /* Adjust for proper spacing */
-    
-    /* Lined Paper Effect */
-    background: repeating-linear-gradient(
-        to bottom,
-        #fff 0px,
-        #fff 28px,  /* Space between lines */
-        rgba(0, 0, 0, 0.1) 29px  /* Light grayish line */
-    );
-    border-top: 10px solid #e74c3c; /* Red margin line at the top */
-    padding-top: 15px; /* Adjust for margin line */
+    background: #f9f1e7; /* Paper color */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.journal-entry:hover {
-    transform: rotate(0deg) scale(1.02); /* Slight lift on hover */
-}
-
-/* Optional: Add a little margin line on the left like real paper */
-.journal-entry::before {
+.flap {
     content: "";
     position: absolute;
-    top: 0;
-    left: 20px;
-    width: 3px;
-    height: 100%;
-    background: #e74c3c; /* Red margin line */
+    top: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 50px solid #e4d4c8; /* Folded flap color */
+    transition: transform 0.6s;
 }
 
-.journal-entry {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 95% 95%, 85% 100%, 75% 95%, 65% 100%, 55% 95%, 45% 100%, 35% 95%, 25% 100%, 15% 95%, 0% 90%);
+.envelope:hover .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope-body {
+    text-align: center;
+    font-family: "Lores-12", sans-serif;
+    padding: 10px;
+}
+
+.read-more {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #8b5e34;
+    font-weight: bold;
 }
 
 .entry-title {
