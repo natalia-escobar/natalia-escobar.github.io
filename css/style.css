@@ -6,7 +6,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: lores-12, sans-serif;
+    font-family: "ff-providence-sans-web-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -15,7 +17,7 @@ body {
 
 /* Navigation bar */
 nav {
-    background: #3F403F;
+    background: #E6E8E6;
     padding: 15px 0;
 }
 
@@ -27,7 +29,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #E6E8E6;
+    color: #3F403F;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
@@ -38,7 +40,7 @@ nav ul li a:hover {
     color: #b0e298;
 }
 #hero {
-    background-color: #475841;
+    background-color: #f9f9f9;
     padding: 50px 20px;
     text-align: center;
 }
@@ -50,16 +52,16 @@ nav ul li a:hover {
 }
 
 #name {
-    font-family: "source-sans-pro", sans-serif;
-    color: #E6E8E6;
+    font-family: "prestige-elite-std", sans-serif;
+    color: #000500;
     font-size: 3rem;
 }
 #typing-text {
-    font-family: lores-12, sans-serif;
-    color: #b0e298; /* Choose a highlight color */
+    font-family: "prestige-elite-std", sans-serif;
+    color: #e85f5c; /* Choose a highlight color */
     font-size: 2.5rem;
     font-weight: bold;
-    border-right: 2px solid #b0e298; /* Blinking cursor effect */
+    border-right: 2px solid #e85f5c; /* Blinking cursor effect */
     padding-right: 5px;
     animation: blink 0.7s infinite;
 }
