@@ -17,7 +17,7 @@ body {
 
 /* Navigation bar */
 nav {
-    background: #E6E8E6;
+    background: #f9f9f9;
     padding: 15px 0;
 }
 
@@ -29,7 +29,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #3F403F;
+    color: #242325;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
@@ -37,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #b0e298;
+    color: #e8585c;
 }
 #hero {
     background-color: #f9f9f9;
@@ -58,10 +58,10 @@ nav ul li a:hover {
 }
 #typing-text {
     font-family: "prestige-elite-std", sans-serif;
-    color: #e85f5c; /* Choose a highlight color */
-    font-size: 2.5rem;
+    color: #FB3640; /* Choose a highlight color */
+    font-size: 3rem;
     font-weight: bold;
-    border-right: 2px solid #e85f5c; /* Blinking cursor effect */
+    border-right: 2px solid #FB3640; /* Blinking cursor effect */
     padding-right: 5px;
     animation: blink 0.7s infinite;
 }
