@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Lo-Res, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -15,7 +15,7 @@ body {
 
 /* Navigation bar */
 nav {
-    background: #333;
+    background: #3F403F;
     padding: 15px 0;
 }
 
@@ -27,7 +27,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #E6E8E6;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
@@ -35,14 +35,32 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #9FB8AD;
 }
 
 /* Hero section */
 #hero {
     padding: 50px 20px;
-    background: #f1dabf;
-    color: #000500;
+    background: #CED0CE;
+    color: #475841;
+}
+
+#hero h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+#typing-text {
+    color: #475841; /* Choose a highlight color */
+    font-weight: bold;
+    border-right: 2px solid #475841; /* Blinking cursor effect */
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 /* Project grid */
