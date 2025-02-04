@@ -6,8 +6,8 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: "ff-providence-sans-web-pro", sans-serif;
-    font-weight: 700;
+    font-family: "permanent-marker", sans-serif;
+    font-weight: 400;
     font-style: normal;
     line-height: 1.6;
     background-color: #f4f4f4;
@@ -70,31 +70,6 @@ nav ul li a:hover {
     50% { border-color: transparent; }
 }
 
-/* Project grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.project-item {
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.project-item:hover {
-    transform: scale(1.05);
-}
-
-.project-item img {
-    width: 100%;
-    border-radius: 8px;
-}
-
 /* Footer */
 footer {
     background: #333;
@@ -102,3 +77,49 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+#projects-preview {
+    padding: 50px 20px;
+    background-color: #fdf6e3; /* Light paper-like background */
+}
+
+.journal-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.journal-entry {
+    width: 80%;
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    transform: rotate(-2deg); /* Slight tilt for a casual, handmade effect */
+    transition: transform 0.3s ease;
+}
+
+.journal-entry:hover {
+    transform: rotate(0deg) scale(1.02); /* Slight lift on hover */
+}
+
+.journal-entry img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.entry-text {
+    font-family: "ff-providence-sans-web-pro", sans-serif; /* Example handwritten font */
+    text-align: center;
+    color: #333;
+}
+
+.entry-text h3 {
+    font-family: "ff-providence-sans-web-pro", cursive;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
