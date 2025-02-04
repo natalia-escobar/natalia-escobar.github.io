@@ -80,7 +80,7 @@ footer {
 
 #projects-preview {
     padding: 50px 20px;
-    background-color: #fdf6e3; /* Light paper-like background */
+    background-color: #f9f9f9; /* Light paper-like background */
 }
 
 .journal-entries {
@@ -126,6 +126,10 @@ footer {
     width: 3px;
     height: 100%;
     background: #e74c3c; /* Red margin line */
+}
+
+.journal-entry {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 95% 95%, 85% 100%, 75% 95%, 65% 100%, 55% 95%, 45% 100%, 35% 95%, 25% 100%, 15% 95%, 0% 90%);
 }
 
 
