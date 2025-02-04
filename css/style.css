@@ -38,23 +38,22 @@ nav ul li a:hover {
     color: #9FB8AD;
 }
 
-/* Hero section */
-#hero {
-    padding: 50px 20px;
-    background: #CED0CE;
-    color: #475841;
-}
-
 #hero h1 {
     font-size: 2rem;
     text-align: center;
     margin-top: 20vh;
 }
 
+#name {
+    font-family: "source-sans-pro", sans-serif;
+    color: #E6E8E6;
+    font-size: 3rem;
+}
 #typing-text {
-    color: #475841; /* Choose a highlight color */
+    font-family: lores-12, sans-serif;
+    color: #b0e298; /* Choose a highlight color */
     font-weight: bold;
-    border-right: 2px solid #475841; /* Blinking cursor effect */
+    border-right: 2px solid #b0e298; /* Blinking cursor effect */
     padding-right: 5px;
     animation: blink 0.7s infinite;
 }

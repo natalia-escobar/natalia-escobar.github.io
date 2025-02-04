@@ -1,9 +1,9 @@
 const textElement = document.getElementById("typing-text");
 
 const phrases = [
-    "a photographer",
-    "a creative spirit",
-    "interested in fashion principles",
+    "a creative problem-solver",
+    "passionate about sustainability",
+    "interested in material innovation",
     "a storyteller",
     "a designer"
 ];
