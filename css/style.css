@@ -89,7 +89,7 @@ footer {
 
 .envelope {
     position: relative; /* Enable positioning context for child elements */
-    width: 200px;  /* Adjust this based on your preferred size */
+    width: 150px;  /* Adjust this based on your preferred size */
     height: auto;  /* Keeps aspect ratio */
     cursor: pointer;
 }
