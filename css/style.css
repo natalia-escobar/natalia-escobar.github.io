@@ -101,9 +101,9 @@ footer {
     width: 100%; /* Cover the entire envelope */
     height: 100%; /* Cover the entire envelope */
     display: none; /* Hide by default */
-    flex-direction: column; /* Stack text vertically */
     justify-content: center; /* Center text vertically */
     align-items: center; /* Center text horizontally */
+    text-align: center; /* Center text */
 }
 
 .envelope:hover .envelope-front {
@@ -118,15 +118,20 @@ footer {
     font-family: "prestige-elite-std", sans-serif;
     font-size: 1.5em;
     color: #333;
-    position: relative; /* Optional for layering */
-    z-index: 1; /* Ensure text is above the image */
+    position: absolute; /* Position it absolutely on the envelope back */
+    z-index: 2; /* Ensure text is above the image */
+    top: 30%; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
 }
 
 .entry-text {
-    font-family: "providence-sans-pro", sans-serif;
+    font-family: "providence-sans-pro", sans-serif; 
     font-size: 1em;
     color: #555;
-    line-height: 1.6;
-    position: relative; /* Optional for layering */
-    z-index: 1; /* Ensure text is above the image */
+    position: absolute; /* Position it absolutely on the envelope back */
+    z-index: 2; /* Ensure text is above the image */
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering adjustment */
 }
