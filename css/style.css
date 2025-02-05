@@ -94,7 +94,7 @@ footer {
 }
 
 .envelope-front img, .envelope-back {
-    
+
     width: 100%; /* Ensures it scales to fit the container */
     max-width: 500px; /* Adjust based on how big you want it */
     height: auto; /* Keeps the aspect ratio */
@@ -104,7 +104,7 @@ footer {
 }
 
 .envelope-back {
-    background: #f9f1e7;
+    background: #f9f9f9;
     display: flex;
     flex-direction: column;
     justify-content: center;
