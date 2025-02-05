@@ -87,12 +87,17 @@ footer {
     padding: 20px;
 }
 
+.envelope-container a {
+    text-decoration: none; /* Remove underline from links */
+}
+
 .envelope {
     position: relative; /* Enable positioning context for child elements */
     width: 500px;  /* Set your desired width */
     height: auto;  /* Keeps aspect ratio */
     cursor: pointer;
     overflow: hidden; /* Prevents any overflow if necessary */
+    display: block;
 }
 
 .envelope-front,
