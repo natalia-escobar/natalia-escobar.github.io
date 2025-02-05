@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: "prestige-elite-std", sans-serif;
+    font-family: "ff-providence-sans-web-pro", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.6;
@@ -134,12 +134,12 @@ footer {
 }
 
 .entry-text {
-    font-family: "providence-sans-pro", sans-serif; 
+    font-family: "ff-providence-sans-web-pro", sans-serif; 
     font-size: 1em;
     color: #555;
     position: absolute; /* Position it absolutely on the envelope back */
     z-index: 2; /* Ensure text is above the image */
     top: 50%; /* Adjust as needed */
-    left: 50%; /* Center horizontally */
+    left: 25%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Centering adjustment */
 }
