@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: "permanent-marker", sans-serif;
+    font-family: "prestige-elite-std", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.6;
@@ -37,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e8585c;
+    color: #ffd100;
 }
 #hero {
     background-color: #f9f9f9;
@@ -58,10 +58,10 @@ nav ul li a:hover {
 }
 #typing-text {
     font-family: "prestige-elite-std", sans-serif;
-    color: #FB3640; /* Choose a highlight color */
+    color: #002eff; /* Choose a highlight color */
     font-size: 3rem;
     font-weight: bold;
-    border-right: 2px solid #FB3640; /* Blinking cursor effect */
+    border-right: 2px solid #002eff; /* Blinking cursor effect */
     padding-right: 5px;
     animation: blink 0.7s infinite;
 }
@@ -76,7 +76,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 20px 0;
-    background-color: #f8f8f8;
+    background-color: #f9f9f9;
 }
 
 .envelope-container {
@@ -88,17 +88,16 @@ footer {
 }
 
 .envelope {
-    width: 300px;  /* Adjust this based on your image size */
-    height: auto; /* Keeps aspect ratio */
-    position: relative;
+    width: 200px;  /* Adjust this based on your preferred size */
+    height: auto;  /* Keeps aspect ratio */
     cursor: pointer;
 }
 
 .envelope img {
-    width: 100%;
+    width: 100%; /* Makes sure images scale to the defined width */
     height: auto;
     display: block;
-    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Default state - show front */
