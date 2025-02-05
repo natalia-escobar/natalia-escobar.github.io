@@ -10,7 +10,7 @@ body {
     font-weight: 400;
     font-style: normal;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
     text-align: center;
 }
@@ -88,45 +88,45 @@ footer {
 }
 
 .envelope {
+    position: relative; /* Enable positioning context for child elements */
     width: 200px;  /* Adjust this based on your preferred size */
     height: auto;  /* Keeps aspect ratio */
     cursor: pointer;
 }
 
-.envelope img {
-    width: 100%; /* Makes sure images scale to the defined width */
-    height: auto;
-    display: block;
-    transition: opacity 0.3s ease-in-out;
+.envelope-back {
+    position: absolute; /* Position absolutely within the envelope */
+    top: 0; /* Align with the top */
+    left: 0; /* Align with the left */
+    width: 100%; /* Cover the entire envelope */
+    height: 100%; /* Cover the entire envelope */
+    display: none; /* Hide by default */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
 }
 
-/* Default state - show front */
-.envelope .envelope-front {
-    display: block;
-}
-
-.envelope .envelope-back {
-    display: none;
-}
-
-/* On hover - show back and hide front */
 .envelope:hover .envelope-front {
-    display: none;
+    display: none; /* Hide front image on hover */
 }
 
 .envelope:hover .envelope-back {
-    display: block;
+    display: flex; /* Show back image and text on hover */
 }
 
 .entry-title {
     font-family: "prestige-elite-std", sans-serif;
     font-size: 1.5em;
     color: #333;
+    position: relative; /* Optional for layering */
+    z-index: 1; /* Ensure text is above the image */
 }
 
 .entry-text {
-    font-family: "providence-sans-pro", sans-serif; /* Your different font for p */
+    font-family: "providence-sans-pro", sans-serif;
     font-size: 1em;
     color: #555;
     line-height: 1.6;
+    position: relative; /* Optional for layering */
+    z-index: 1; /* Ensure text is above the image */
 }
