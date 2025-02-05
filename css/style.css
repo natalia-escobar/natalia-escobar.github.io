@@ -89,7 +89,7 @@ footer {
 
 .envelope {
     position: relative; /* Enable positioning context for child elements */
-    width: 200px;  /* Set your desired width */
+    width: 100px;  /* Set your desired width */
     height: auto;  /* Keeps aspect ratio */
     cursor: pointer;
     overflow: hidden; /* Prevents any overflow if necessary */
@@ -102,26 +102,17 @@ footer {
     object-fit: contain; /* Scale images without cutting off */
 }
 
-
-/*.envelope {
-    position: relative; /* Enable positioning context for child elements */
-    /* width: 150px;  /* Adjust this based on your preferred size */
-    /* height: auto;  /* Keeps aspect ratio */
-    /* cursor: pointer;
-} 
-/*
-
 .envelope-back {
     position: absolute; /* Position absolutely within the envelope */
-     /* top: 0; /* Align with the top */
-    /* left: 0; /* Align with the left */
-    /* width: 100%; /* Cover the entire envelope */
-    /* height: 100%; /* Cover the entire envelope */
-    /* display: none; /* Hide by default */
-    /* justify-content: center; /* Center text vertically */
-    /* align-items: center; /* Center text horizontally */
-    /*text-align: center; /* Center text */
-/* } */
+    top: 0; /* Align with the top */
+    left: 0; /* Align with the left */
+    width: 100%; /* Cover the entire envelope */
+    height: 100%; /* Cover the entire envelope */
+    display: none; /* Hide by default */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    text-align: center; /* Center text */
+}
 
 .envelope:hover .envelope-front {
     display: none; /* Hide front image on hover */
