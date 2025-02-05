@@ -89,48 +89,34 @@ footer {
 
 .envelope {
     width: 300px;  /* Adjust this based on your image size */
-    height: 200px; /* Adjust this based on your image size */
+    height: auto; /* Keeps aspect ratio */
     position: relative;
     cursor: pointer;
-    transform-style: preserve-3d; /* Enables 3D flipping */
-    transition: transform 0.6s ease-in-out;
 }
 
-.envelope-front, .envelope-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hides the back until flipped */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.envelope-front img {
+.envelope img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    display: block;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Default state - show front */
+.envelope .envelope-front {
     display: block;
 }
 
-.envelope-back {
-    background: url("assets/envelope_back.png") center/contain no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg); /* Starts flipped */
+.envelope .envelope-back {
+    display: none;
 }
 
-.envelope:hover {
-    transform: rotateY(180deg); /* Flips envelope */
+/* On hover - show back and hide front */
+.envelope:hover .envelope-front {
+    display: none;
 }
 
-.read-more {
-    margin-top: 10px;
-    text-decoration: none;
-    color: #8b5e34;
-    font-weight: bold;
+.envelope:hover .envelope-back {
+    display: block;
 }
 
 .entry-title {
