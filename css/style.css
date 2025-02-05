@@ -99,6 +99,7 @@ footer {
     height: auto; /* Keeps aspect ratio */
     cursor: pointer;
     overflow: hidden; /* Prevents any overflow if necessary */
+    display: block;
 }
 
 .envelope-front,
