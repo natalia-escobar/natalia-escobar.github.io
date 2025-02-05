@@ -89,15 +89,16 @@ footer {
 
 .envelope-container a {
     text-decoration: none; /* Remove underline from links */
+    display: block; /* Ensure the anchor tag behaves like a block */
+    position: relative; /* Enable positioning context for hover effects */
 }
 
 .envelope {
     position: relative; /* Enable positioning context for child elements */
-    width: 500px;  /* Set your desired width */
-    height: auto;  /* Keeps aspect ratio */
+    width: 500px; /* Set your desired width */
+    height: auto; /* Keeps aspect ratio */
     cursor: pointer;
     overflow: hidden; /* Prevents any overflow if necessary */
-    display: block;
 }
 
 .envelope-front,
@@ -145,6 +146,6 @@ footer {
     position: absolute; /* Position it absolutely on the envelope back */
     z-index: 2; /* Ensure text is above the image */
     top: 50%; /* Adjust as needed */
-    left: 25%; /* Center horizontally */
+    left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Centering adjustment */
 }
