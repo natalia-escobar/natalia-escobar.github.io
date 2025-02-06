@@ -21,7 +21,7 @@ function typeEffect() {
     }
 
     if (!isDeleting && charIndex === currentPhrase.length) {
-        setTimeout(() => isDeleting = true, 1000); // Pause before deleting
+        setTimeout(() => isDeleting = true, 3000); // Pause before deleting
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         index = (index + 1) % phrases.length; // Move to next phrase
