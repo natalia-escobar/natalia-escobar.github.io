@@ -5,6 +5,10 @@ body, h1, h2, h3, p, ul, li {
     box-sizing: border-box;
 }
 
+.section-title {
+    text-align: left;
+}
+
 body {
     font-family: "ff-providence-sans-web-pro", sans-serif;
     font-weight: 400;
