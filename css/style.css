@@ -5,6 +5,11 @@ body, h1, h2, h3, p, ul, li {
     box-sizing: border-box;
 }
 
+p {
+    text-align: left;
+    padding-left: 25vw;
+}
+
 .section-title {
     text-align: left;
     padding-left: 15vw;
@@ -17,8 +22,7 @@ body {
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
-    text-align: left;
-    padding-left: 25vw;
+    text-align: center;
     width: 100%;
 }
 
