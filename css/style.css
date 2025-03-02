@@ -169,15 +169,43 @@ footer {
     align-items: flex-start; /* Align to the left */
 }
 
-.project-stage img {
-    max-width: 100%; /* Responsive images */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px 0; /* Space above and below images */
+.project-stage {
+    display: grid;
+    grid-template-columns: 250px auto; /* Left column width fixed, right column flexible */
+    align-items: start; /* Align items to the top */
+    gap: 40px; /* Space between columns */
+    margin-bottom: 40px; /* Space between sections */
 }
 
+/* Left Column - Section Title */
 .section-title {
-    margin-top: 20px; /* Space above section titles */
-    font-size: 1.5em; /* Adjust size as needed */
+    text-align: right; /* Align title to the right */
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Right Column - Content */
+.section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between text and images */
+    max-width: 700px; /* Control width for readability */
+}
+
+.section-content img {
+    width: 100%; /* Ensure images fit inside column */
+    height: auto; /* Keep aspect ratio */
+    margin-top: 10px;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .project-stage {
+        grid-template-columns: 1fr; /* Stack sections on small screens */
+    }
+    .section-title {
+        text-align: left; /* Align left for smaller screens */
+    }
 }
 
 .subheading {
