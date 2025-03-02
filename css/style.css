@@ -150,3 +150,36 @@ footer {
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Centering adjustment */
 }
+
+/* Header Image */
+.header-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Aligning elements in-line */
+.project-details p {
+    display: inline; /* Make paragraphs display inline */
+    margin-right: 10px; /* Space between in-line elements */
+}
+
+.project-summary {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to the left */
+}
+
+.project-stage img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Space above and below images */
+}
+
+.section-title {
+    margin-top: 20px; /* Space above section titles */
+    font-size: 1.5em; /* Adjust size as needed */
+}
+
+.subheading {
+    margin-top: 10px; /* Space above subheadings */
+}
