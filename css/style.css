@@ -188,12 +188,13 @@ footer {
 
 /* Right Column - Content */
 .section-content {
-    display: flex;
-    font-family: "prestige-elite-std", sans-serif;
-    flex-direction: column;
+    display: block; /* Removes flex restrictions */
     text-align: left;
-    gap: 10px; /* Space between text and images */
-    width: 80%; /* Control width for readability */
+    width: 100%; /* Takes up the whole page */
+    max-width: 100%; /* Ensures no extra space */
+    margin: 0; /* Removes any unwanted centering */
+    padding-left: 20px; /* Adds a slight buffer from the left edge */
+    font-family: "prestige-elite-std", monospace !important;
 }
 
 .section-content img {
