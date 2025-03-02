@@ -90,19 +90,26 @@ footer {
     background-color: #f9f9f9;
 }
 
-.envelope-container {
+/*.envelope-container {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
+} */
+
+.envelope-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.envelope-container a {
+/* .envelope-container a {
     text-decoration: none; /* Remove underline from links */
-    display: block; /* Ensure the anchor tag behaves like a block */
-    position: relative; /* Enable positioning context for hover effects */
-}
+/*    display: block; /* Ensure the anchor tag behaves like a block */
+/*    position: relative; /* Enable positioning context for hover effects */
+/* } */
 
 .envelope {
     position: relative; /* Enable positioning context for child elements */
@@ -113,31 +120,65 @@ footer {
     display: block;
 }
 
-.envelope-front,
-.envelope-back {
-    width: 100%; /* Ensure the images fill the envelope width */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: contain; /* Scale images without cutting off */
+/* .envelope-front, */
+/* .envelope-back { */
+    /* width: 100%; /* Ensure the images fill the envelope width */
+    /* height: auto; /* Maintain the aspect ratio */
+    /* object-fit: contain; /* Scale images without cutting off */
+/* }  */
+.front-envelope {
+    width: 120px; /* Adjust as needed */
+    height: 90px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+    text-decoration: none; /* Remove underline */
 }
 
-.envelope-back {
+.envelope-front {
+    transform: rotateY(0deg);
+}
+
+
+.envelope-front, .envelope-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* .envelope-back {
     position: absolute; /* Position absolutely within the envelope */
-    top: 0; /* Align with the top */
-    left: 0; /* Align with the left */
-    width: 100%; /* Cover the entire envelope */
-    height: 100%; /* Cover the entire envelope */
-    display: none; /* Hide by default */
-    justify-content: center; /* Center text vertically */
-    align-items: center; /* Center text horizontally */
-    text-align: center; /* Center text */
+/*    top: 0; /* Align with the top */
+/*    left: 0; /* Align with the left */
+/*    width: 100%; /* Cover the entire envelope */
+/*    height: 100%; /* Cover the entire envelope */
+/*    display: none; /* Hide by default */
+/*    justify-content: center; /* Center text vertically */
+/*    align-items: center; /* Center text horizontally */
+/*    text-align: center; /* Center text */
+/*} */
+
+.envelope-back {
+    transform: rotateY(180deg);
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
 
 .envelope:hover .envelope-front {
-    display: none; /* Hide front image on hover */
+    transform: rotateY(180deg);
 }
 
 .envelope:hover .envelope-back {
-    display: flex; /* Show back image and text on hover */
+    transform: rotateY(360deg);
 }
 
 .entry-title {
@@ -160,4 +201,26 @@ footer {
     top: 60%; /* Adjust as needed */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Centering adjustment */
+}
+
+.shuffle-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Hide shuffle button initially */
+#shuffle-button {
+    display: none;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#shuffle-button:hover {
+    background: #444;
 }
