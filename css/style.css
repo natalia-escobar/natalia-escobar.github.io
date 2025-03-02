@@ -184,6 +184,7 @@ footer {
     width: 20%;
     text-align: right;
     padding-right: 20px;
+    margin-left: 40px;
 }
 
 /* Right Column - Content */
@@ -194,7 +195,9 @@ footer {
     max-width: 100%; /* Ensures no extra space */
     margin: 0; /* Removes any unwanted centering */
     padding-left: 20px; /* Adds a slight buffer from the left edge */
-    font-family: "prestige-elite-std", monospace !important;
+    font-family: "interface", monospace !important;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .section-content img {
