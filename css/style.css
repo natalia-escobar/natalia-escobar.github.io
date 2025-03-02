@@ -187,7 +187,9 @@ footer {
 /* Right Column - Content */
 .section-content {
     display: flex;
+    font-family: "prestige-elite-std", sans-serif;
     flex-direction: column;
+    text-align: left;
     gap: 10px; /* Space between text and images */
     max-width: 700px; /* Control width for readability */
 }
