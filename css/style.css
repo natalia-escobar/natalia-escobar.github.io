@@ -165,7 +165,6 @@ footer {
 
 .project-summary {
     display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align to the left */
 }
 
@@ -182,6 +181,9 @@ footer {
     text-align: right; /* Align title to the right */
     font-size: 1.8em;
     font-weight: bold;
+    width: 20%;
+    text-align: right;
+    padding-right: 20px;
 }
 
 /* Right Column - Content */
@@ -191,7 +193,7 @@ footer {
     flex-direction: column;
     text-align: left;
     gap: 10px; /* Space between text and images */
-    max-width: 700px; /* Control width for readability */
+    width: 80%; /* Control width for readability */
 }
 
 .section-content img {
@@ -212,4 +214,12 @@ footer {
 
 .subheading {
     margin-top: 10px; /* Space above subheadings */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 40px auto; /* Adds space around */
+    max-width: 800px; /* Adjust width */
 }
