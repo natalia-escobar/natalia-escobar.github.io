@@ -98,11 +98,14 @@ footer {
     padding: 20px;
 } */
 
+/* Envelope container should scroll horizontally */
 .envelope-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 70%; /* Control how many envelopes are visible at once */
 }
 
 /* .envelope-container a {
@@ -111,13 +114,13 @@ footer {
 /*    position: relative; /* Enable positioning context for hover effects */
 /* } */
 
+/* Each envelope */
 .envelope {
-    position: relative; /* Enable positioning context for child elements */
-    width: 500px; /* Set your desired width */
-    height: auto; /* Keeps aspect ratio */
-    cursor: pointer;
-    overflow: hidden; /* Prevents any overflow if necessary */
-    display: block;
+    position: relative;
+    width: 120px; /* Adjust size */
+    height: 80px;
+    flex-shrink: 0;
+    text-decoration: none;
 }
 
 /* .envelope-front, */
@@ -137,15 +140,19 @@ footer {
 
 .envelope-front {
     transform: rotateY(0deg);
+    text-align: center;
 }
 
 
+/* Front and back styling */
 .envelope-front, .envelope-back {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
     backface-visibility: hidden;
-    transition: transform 0.6s ease-in-out;
 }
 
 /* .envelope-back {
@@ -159,6 +166,14 @@ footer {
 /*    align-items: center; /* Center text horizontally */
 /*    text-align: center; /* Center text */
 /*} */
+
+.envelope-front img, .envelope-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 
 .envelope-back {
     transform: rotateY(180deg);
@@ -178,7 +193,7 @@ footer {
 }
 
 .envelope:hover .envelope-back {
-    transform: rotateY(360deg);
+    transform: rotateY(0);
 }
 
 .entry-title {
@@ -209,18 +224,17 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Hide shuffle button initially */
-#shuffle-button {
-    display: none;
-    margin: 20px auto;
-    padding: 10px 15px;
-    background: #222;
-    color: white;
+/* Navigation arrows */
+.arrow {
+    background: none;
     border: none;
+    font-size: 24px;
     cursor: pointer;
-    transition: 0.3s;
+    padding: 10px;
+    color: black;
+    transition: opacity 0.3s;
 }
 
-#shuffle-button:hover {
-    background: #444;
+.arrow:hover {
+    opacity: 0.6;
 }

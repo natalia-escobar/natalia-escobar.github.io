@@ -2,13 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Typing Effect
     const textElement = document.getElementById("typing-text");
 
-    const phrases = [
-        "a creative problem-solver",
-        "passionate about sustainability",
-        "interested in material innovation",
-        "a storyteller",
-        "a designer"
-    ];
+    if (textElement) { // Check if the element exists
+        const phrases = [
+            "a creative problem-solver",
+            "passionate about sustainability",
+            "interested in material innovation",
+            "a storyteller",
+            "a designer"
+        ];
 
     let index = 0;
     let charIndex = 0;
@@ -34,21 +35,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeEffect(); // Start typing effect
 
-    // Envelope Shuffle Effect
-    const container = document.querySelector(".envelope-container");
-    let envelopes = Array.from(container.children);
-    const shuffleButton = document.getElementById("shuffle-button");
-
-    function shuffleEnvelopes() {
-        envelopes.sort(() => Math.random() - 0.5);
-        container.innerHTML = "";
-        envelopes.forEach(env => container.appendChild(env));
-        shuffleButton.style.display = "block"; // Show shuffle button
     }
 
-    // Initial shuffle on page load
-    shuffleEnvelopes();
+    // Envelope Scrolling
+    const container = document.querySelector(".envelope-container");
+    const prevArrow = document.getElementById("prev-arrow");
+    const nextArrow = document.getElementById("next-arrow");
 
-    // Shuffle envelopes when "Shuffle Again" is clicked
-    shuffleButton.addEventListener("click", shuffleEnvelopes);
+    if (container && prevArrow && nextArrow) { // Check if elements exist
+        const scrollAmount = 140; // Adjust based on envelope size
+
+        prevArrow.addEventListener("click", () => {
+            container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+
+        nextArrow.addEventListener("click", () => {
+            container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    }
 });
