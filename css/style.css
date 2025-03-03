@@ -154,7 +154,7 @@ footer {
 /* Header Image */
 .header-image {
     width: 100%; /* Full width */
-    height: 200px; /* Maintain aspect ratio */
+    height: 400px; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
