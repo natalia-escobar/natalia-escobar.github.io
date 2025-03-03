@@ -200,7 +200,7 @@ footer {
 .section-content {
     display: block; /* Removes flex restrictions */
     text-align: left;
-    width: 100%; /* Takes up the whole page */
+    width: 80%; /* Takes up the whole page */
     max-width: 100%; /* Ensures no extra space */
     margin: 0; /* Removes any unwanted centering */
     padding-left: 20px; /* Adds a slight buffer from the left edge */
