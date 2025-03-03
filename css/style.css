@@ -159,9 +159,16 @@ footer {
 }
 
 /* Aligning elements in-line */
-.project-details p {
+.project-details h2 {
+    font-size: 1.2em;
     display: inline; /* Make paragraphs display inline */
     margin-right: 10px; /* Space between in-line elements */
+}
+
+.project-title h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: center;
 }
 
 .project-summary {
