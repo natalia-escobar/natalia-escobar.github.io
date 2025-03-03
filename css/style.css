@@ -160,7 +160,7 @@ footer {
 
 /* Aligning elements in-line */
 .project-details p {
-    font-size: 2.2em;
+    font-size: 1.2em;
     display: inline; /* Make paragraphs display inline */
     margin-right: 10px; /* Space between in-line elements */
 }
@@ -200,7 +200,7 @@ footer {
 .section-content {
     display: block; /* Removes flex restrictions */
     text-align: left;
-    width: 75%; /* Takes up the whole page */
+    width: 100%; /* Takes up the whole page */
     max-width: 100%; /* Ensures no extra space */
     margin: 0; /* Removes any unwanted centering */
     padding-left: 20px; /* Adds a slight buffer from the left edge */
