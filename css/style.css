@@ -159,8 +159,8 @@ footer {
 }
 
 /* Aligning elements in-line */
-.project-details h2 {
-    font-size: 1.2em;
+.project-details p {
+    font-size: 0.8em;
     display: inline; /* Make paragraphs display inline */
     margin-right: 10px; /* Space between in-line elements */
 }
