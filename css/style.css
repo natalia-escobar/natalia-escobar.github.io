@@ -154,7 +154,8 @@ footer {
 /* Header Image */
 .header-image {
     width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
+    height: 200px; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 /* Aligning elements in-line */
