@@ -172,7 +172,7 @@ footer {
     display: grid;
     grid-template-columns: 250px auto; /* Left column width fixed, right column flexible */
     align-items: start; /* Align items to the top */
-    gap: 40px; /* Space between columns */
+    gap: 80px; /* Space between columns */
     margin-bottom: 40px; /* Space between sections */
 }
 
@@ -196,6 +196,12 @@ footer {
     margin: 0; /* Removes any unwanted centering */
     padding-left: 20px; /* Adds a slight buffer from the left edge */
     font-family: "interface", monospace !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section-content h3 {
+    font-family: "ff-providence-sans-web-pro", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
