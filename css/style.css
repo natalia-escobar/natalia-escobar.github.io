@@ -158,32 +158,30 @@ footer {
     object-fit: cover;
 }
 
+.project-overview {
+    margin: 0 80px; /* Add margin to the section */
+}
+
 .project-info {
-    display: grid;
-    grid-template-columns: 250px auto; /* Left column width fixed, right column flexible */
-    align-items: start; /* Align items to the top */
-    gap: 80px; /* Space between columns */
-    margin-bottom: 40px; /* Space between sections */
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: flex-start; /* Align items at the top */
+    gap: 40px; /* Space between columns */
+    margin-bottom: 40px; /* Space below the project info */
 }
 
 /* Adjust project-details and section-content as needed */
 .project-details {
+    flex: 0 0 250px; /* Fixed width for project details */
     display: flex;
     flex-direction: column; /* Keep content aligned vertically */
-    align-items: flex-start; /* Aligns items to the left */
-    width: 35%;
-    padding-right: 40px;
-    margin-left: 80px;
+    align-items: flex-start; /* Align items to the left */
 }
 
 .project-content {
-    display: block; /* Removes flex restrictions */
-    text-align: left;
-    width: 100%; /* Takes up the whole page */
-    max-width: 100%; /* Ensures no extra space */
-    margin: 0; /* Removes any unwanted centering */
-    padding-left: 20px; /* Adds a slight buffer from the left edge */
-    font-family: "interface", monospace !important;
+    flex: 1; /* Allow project content to grow and fill available space */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add some space on the left side */
+    font-family: "interface", monospace !important; /* Keep your font styles */
     font-weight: 400;
     font-style: normal;
 }
