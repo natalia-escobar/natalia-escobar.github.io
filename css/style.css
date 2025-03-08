@@ -163,12 +163,14 @@ footer {
     font-size: 1.2em;
     display: inline; /* Make paragraphs display inline */
     margin-right: 10px; /* Space between in-line elements */
+    padding-right: 40px;
+    margin-left: 80px;
 }
 
 .project-title h1 {
     font-size: 3em;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 .project-summary {
