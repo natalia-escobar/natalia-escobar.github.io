@@ -173,7 +173,7 @@ footer {
 #project-overview {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 20px; /* Space between the elements */
     text-align: left;
@@ -182,6 +182,8 @@ footer {
 /* Ensures project-details is placed to the right of section-content */
 .project-details {
     order: 2;
+    flex: 1; /* Allows it to take space */
+    max-width: 400px
 }
 
 .section-content {
@@ -190,6 +192,8 @@ footer {
 
 .section-content {
     order: 1;
+    flex: 2; /* Adjust width ratio */
+    max-width: 600px;
 }
 
 /* Aligning elements in-line */
