@@ -24,7 +24,7 @@ function typeEffect() {
             if (charIndex < currentPhrase.length) {
                 charIndex++;
                 updateText();
-                setTimeout(typeEffect, 300); // Typing speed
+                setTimeout(typeEffect, 100); // Typing speed
             } else {
                 setTimeout(() => {
                     index++;
@@ -44,7 +44,7 @@ function deleteEffect() {
     if (lines.length > 0) {
         lines.pop(); // Remove the last line
         updateText();
-        setTimeout(deleteEffect, 100); // Deleting speed
+        setTimeout(deleteEffect, 300); // Deleting speed
     } else {
         // Reset for the next cycle
         index = 0;
