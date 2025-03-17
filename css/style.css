@@ -59,7 +59,7 @@ nav ul li a:hover {
 #typing-text {
     font-family: "prestige-elite-std", sans-serif;
     color: #002eff; /* Choose a highlight color */
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     border-right: 2px solid #002eff; /* Blinking cursor effect */
     padding-right: 5px;
