@@ -11,23 +11,50 @@ const phrases = [
 let index = 0;
 let charIndex = 0;
 let isDeleting = false;
+let lines = []; // Stores typed lines
 
 function typeEffect() {
-    const currentPhrase = phrases[index];
-    if (isDeleting) {
-        textElement.textContent = currentPhrase.substring(0, charIndex--);
+    if (index < phrases.length) {
+        const currentPhrase = phrases[index];
+
+        if (!isDeleting) {
+            // Typing phase
+            if (charIndex < currentPhrase.length) {
+                charIndex++;
+                updateText();
+                setTimeout(typeEffect, 100); // Typing speed
+            } else {
+                setTimeout(() => {
+                    index++;
+                    charIndex = 0;
+                    typeEffect();
+                }, 1000); // Pause before moving to the next phrase
+            }
+        }
     } else {
-        textElement.textContent = currentPhrase.substring(0, charIndex++);
+        // Start deleting all lines
+        isDeleting = true;
+        deleteEffect();
     }
+}
 
-    if (!isDeleting && charIndex === currentPhrase.length) {
-        setTimeout(() => isDeleting = true, 1000); // Pause before deleting
-    } else if (isDeleting && charIndex === 0) {
+function deleteEffect() {
+    if (lines.length > 0) {
+        lines.pop(); // Remove the last line
+        updateText();
+        setTimeout(deleteEffect, 50); // Deleting speed
+    } else {
+        // Reset for the next cycle
+        index = 0;
         isDeleting = false;
-        index = (index + 1) % phrases.length; // Move to next phrase
+        charIndex = 0;
+        setTimeout(typeEffect, 1000); // Pause before restarting
     }
+}
 
-    setTimeout(typeEffect, isDeleting ? 50 : 100); // Typing speed
+function updateText() {
+    lines[index] = phrases[index].substring(0, charIndex);
+    textElement.innerHTML = lines.join("<br>"); // Display each phrase on a new line
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
