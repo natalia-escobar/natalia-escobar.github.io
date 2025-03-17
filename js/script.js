@@ -7,7 +7,7 @@ const phrases = [
     "passionate about sustainability",
     "interested in material innovation",
     "a storyteller",
-    "a designer"
+    "a mechanical design engineer"
 ];
 
 let index = 0;

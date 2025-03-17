@@ -46,7 +46,7 @@ nav ul li a:hover {
 }
 
 #hero h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
     margin-top: 20vh;
 }
@@ -59,7 +59,7 @@ nav ul li a:hover {
 #typing-text {
     font-family: "prestige-elite-std", sans-serif;
     color: #002eff; /* Choose a highlight color */
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     border-right: 2px solid #002eff; /* Blinking cursor effect */
     padding-right: 5px;
