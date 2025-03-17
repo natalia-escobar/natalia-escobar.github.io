@@ -1,6 +1,6 @@
 const textElement = document.getElementById("typing-text");
 
-const namePrefix = "Your Name is "; // Visible only for the first phrase
+const namePrefix = "Natalia Escobar is "; // Visible only for the first phrase
 const invisibleSpacing = "&nbsp;".repeat(namePrefix.length); // Invisible space equivalent to prefix
 const phrases = [
     "a creative problem-solver",
@@ -24,7 +24,7 @@ function typeEffect() {
             if (charIndex < currentPhrase.length) {
                 charIndex++;
                 updateText();
-                setTimeout(typeEffect, 100); // Typing speed
+                setTimeout(typeEffect, 300); // Typing speed
             } else {
                 setTimeout(() => {
                     index++;
