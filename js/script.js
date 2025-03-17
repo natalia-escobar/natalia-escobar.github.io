@@ -56,7 +56,7 @@ function deleteEffect() {
 
 function updateText() {
     if (index === 0) {
-        lines[index] = namePrefix + phrases[index].substring(0, charIndex);
+        lines[index] = phrases[index].substring(0, charIndex);
     } else {
         lines[index] = invisibleSpacing + phrases[index].substring(0, charIndex);
     }
