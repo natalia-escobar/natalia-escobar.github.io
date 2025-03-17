@@ -1,5 +1,7 @@
 const textElement = document.getElementById("typing-text");
 
+const namePrefix = "Natalia Escobar is "; // Visible only for the first phrase
+const invisibleSpacing = "&nbsp;".repeat(namePrefix.length); // Invisible space equivalent to prefix
 const phrases = [
     "a creative problem-solver",
     "passionate about sustainability",
@@ -34,7 +36,7 @@ function typeEffect() {
     } else {
         // Start deleting all lines
         isDeleting = true;
-        deleteEffect();
+        setTimeout(deleteEffect, 1000); // Pause before deleting
     }
 }
 
@@ -53,8 +55,13 @@ function deleteEffect() {
 }
 
 function updateText() {
-    lines[index] = phrases[index].substring(0, charIndex);
+    if (index === 0) {
+        lines[index] = namePrefix + phrases[index].substring(0, charIndex);
+    } else {
+        lines[index] = invisibleSpacing + phrases[index].substring(0, charIndex);
+    }
     textElement.innerHTML = lines.join("<br>"); // Display each phrase on a new line
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
+
