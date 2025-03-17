@@ -1,6 +1,6 @@
 const textElement = document.getElementById("typing-text");
 
-const namePrefix = "Natalia Escobar is "; // Visible only for the first phrase
+const namePrefix = "Your Name is "; // Visible only for the first phrase
 const invisibleSpacing = "&nbsp;".repeat(namePrefix.length); // Invisible space equivalent to prefix
 const phrases = [
     "a creative problem-solver",
@@ -34,7 +34,7 @@ function typeEffect() {
             }
         }
     } else {
-        // Start deleting all lines
+        // Start deleting all lines after all phrases are typed
         isDeleting = true;
         setTimeout(deleteEffect, 1000); // Pause before deleting
     }
@@ -44,21 +44,24 @@ function deleteEffect() {
     if (lines.length > 0) {
         lines.pop(); // Remove the last line
         updateText();
-        setTimeout(deleteEffect, 50); // Deleting speed
+        setTimeout(deleteEffect, 100); // Deleting speed
     } else {
         // Reset for the next cycle
         index = 0;
         isDeleting = false;
         charIndex = 0;
+        lines = []; // Clear all stored lines
         setTimeout(typeEffect, 1000); // Pause before restarting
     }
 }
 
 function updateText() {
-    if (index === 0) {
-        lines[index] = phrases[index].substring(0, charIndex);
-    } else {
-        lines[index] = invisibleSpacing + phrases[index].substring(0, charIndex);
+    if (index < phrases.length) {
+        if (index === 0) {
+            lines[index] = phrases[index].substring(0, charIndex);
+        } else {
+            lines[index] = invisibleSpacing + phrases[index].substring(0, charIndex);
+        }
     }
     textElement.innerHTML = lines.join("<br>"); // Display each phrase on a new line
 }
