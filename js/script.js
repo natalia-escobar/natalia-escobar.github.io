@@ -86,8 +86,7 @@ mailboxWrapper.classList.add("wiggle");
 
 // On hover: stop wiggle, play flag animation, show text
 mailboxFlag.addEventListener("mouseenter", () => {
-    mailboxFlag.classList.remove("wiggle");
-    mailboxFlag.play();
+    mailbox.classList.add("flag-up");
     mailboxText.style.opacity = 1;
 });
 

@@ -273,6 +273,19 @@ footer {
     75% { transform: rotate(-0.6deg); }
 }
 
+#mailbox-flag.flag-up {
+    animation: raise-flag 1s ease-out forwards;
+}
+
+@keyframes raise-flag {
+    from {
+        transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px); /* Adjust as needed */
+    }
+}
+
 /* Optional: smoother mailbox fade-in */
 #mailbox-section {
     display: flex;
@@ -294,6 +307,7 @@ footer {
 }
 
 #mailbox-text {
+    white-space: nowrap;
     font-family: 'prestige-elite-std', cursive;
     font-size: 1.8rem;
     position: absolute;
@@ -301,5 +315,4 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 1s ease;
-    opacity: 0;
 }
