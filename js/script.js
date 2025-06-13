@@ -68,3 +68,38 @@ function updateText() {
 
 document.addEventListener("DOMContentLoaded", typeEffect);
 
+// Select elements
+const mailboxFlag = document.getElementById("mailbox-flag");
+const mailboxMail = document.getElementById("mailbox-mail");
+const mailboxText = document.getElementById("mailbox-text");
+
+let clickedOnce = false;
+
+// Load video sources
+mailboxFlag.src = "media/mailbox-flag.webm";
+mailboxMail.src = "media/mailbox-mail.webm";
+
+// Scroll into view → start animation + show text
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        mailboxFlag.play();
+        mailboxText.style.opacity = 1;
+    }
+});
+}, { threshold: 0.5 });
+
+observer.observe(document.getElementById("mailbox-section"));
+
+// Handle click interaction
+mailboxFlag.addEventListener("click", () => {
+    if (!clickedOnce) {
+        mailboxFlag.style.display = "none";
+        mailboxMail.style.display = "block";
+        mailboxMail.play();
+        clickedOnce = true;
+    } else {
+        window.location.href = "projects.html";
+    }
+});
+

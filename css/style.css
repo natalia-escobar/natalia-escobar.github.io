@@ -262,3 +262,25 @@ footer {
     margin: 40px auto; /* Adds space around */
     max-width: 800px; /* Adjust width */
 }
+
+#mailbox-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.mailbox-wrapper {
+    position: relative;
+    width: 400px; /* adjust to your video's width */
+}
+
+#mailbox-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8rem;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s ease;
+}
