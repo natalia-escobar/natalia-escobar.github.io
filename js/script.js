@@ -76,7 +76,7 @@ const mailboxText = document.getElementById("mailbox-text");
 let clickedOnce = false;
 
 // Load video sources
-mailboxFlag.src = "assets/mailbox-flog.webm";
+mailboxFlag.src = "assets/mailbox-flag.webm";
 mailboxMail.src = "assets/mailbox-mail.webm";
 
 // Scroll into view → start animation + show text
