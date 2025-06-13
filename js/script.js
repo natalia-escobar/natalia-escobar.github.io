@@ -75,6 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const mailboxFlag = document.getElementById("mailbox-flag");
     const mailboxMail = document.getElementById("mailbox-mail");
     const mailboxText = document.getElementById("mailbox-text");
+
+    if (!mailboxFlag || !mailboxMail || !mailboxText) {
+        console.error("One or more mailbox elements not found.");
+        return;
+    }
         
     mailboxFlag.src = "assets/mailbox-flag.webm";
     mailboxMail.src = "assets/mailbox-mail.webm";
@@ -97,9 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
             mailboxMail.style.display = "block";
             mailboxMail.currentTime = 0;
             mailboxMail.play();
-        clickedOnce = true;
+            clickedOnce = true;
     } else {
         window.location.href = "projects.html";
     }
+    });
+
+    mailboxMail.addEventListener("ended", () => {
+        const word = document.getElementById("mailbox-word");
+        word.style.opacity = 1;
     });
 });

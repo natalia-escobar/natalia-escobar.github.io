@@ -57,7 +57,7 @@ nav ul li a:hover {
     font-size: 3rem;
 }
 #typing-text {
-    font-family: "prestige-elite-std", sans-serif;
+    font-family: "ff-providence-sans-web-pro", sans-serif;
     color: #002eff; /* Choose a highlight color */
     font-size: 3rem;
     font-weight: bold;
@@ -299,7 +299,7 @@ footer {
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'prestige-elite-std';
+    font-family: "ff-providence-sans-web-pro";
     font-size: 1.8rem;
     white-space: nowrap;
     color: #002eff;
