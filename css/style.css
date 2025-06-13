@@ -265,14 +265,22 @@ footer {
 
 #mailbox-section {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 100px 0;
+    min-height: 100vh;
+    background: #f9f9f9;
 }
 
 .mailbox-wrapper {
     position: relative;
-    width: 400px; /* adjust to your video's width */
+    width: 300px; /* adjust as needed */
+    max-width: 90%;
+}
+
+.mailbox-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 #mailbox-text {
