@@ -70,30 +70,25 @@ function updateText() {
 
 document.addEventListener("DOMContentLoaded", typeEffect);
 
-const mailboxFlag = document.getElementById("mailbox-flag");
+const mailboxWiggle = document.getElementById("mailbox-wiggle");
+const mailboxFlagup = document.getElementById("mailbox-flagup");
 const mailboxMail = document.getElementById("mailbox-mail");
 const mailboxText = document.getElementById("mailbox-text");
-const mailboxWrapper = document.querySelector(".mailbox-wrapper");
 
 let clickedOnce = false;
 
-// Set sources
-mailboxFlag.src = "assets/mailbox-flag.webm";
-mailboxMail.src = "assets/mailbox-mail.webm";
-
-// Loop wiggle animation with CSS class
-mailboxWrapper.classList.add("wiggle");
-
-// On hover: stop wiggle, play flag animation, show text
-mailboxFlag.addEventListener("mouseenter", () => {
-    mailbox.classList.add("flag-up");
+// On hover: play flag-up animation
+mailboxWiggle.addEventListener("mouseenter", () => {
+    mailboxWiggle.style.display = "none";
+    mailboxFlagup.style.display = "block";
+    mailboxFlagup.play();
     mailboxText.style.opacity = 1;
 });
 
-// On click: swap to mail animation, then link to projects
-mailboxFlag.addEventListener("click", () => {
+// On click: play mail animation or redirect
+mailboxFlagup.addEventListener("click", () => {
     if (!clickedOnce) {
-        mailboxFlag.style.display = "none";
+        mailboxFlagup.style.display = "none";
         mailboxMail.style.display = "block";
         mailboxMail.play();
         clickedOnce = true;
@@ -101,5 +96,4 @@ mailboxFlag.addEventListener("click", () => {
         window.location.href = "projects.html";
     }
 });
-
 
