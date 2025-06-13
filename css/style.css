@@ -273,13 +273,29 @@ footer {
     min-height: 100vh;
 }
 
-.mailbox-visible {
-    opacity: 1;
+/* Wiggle animation */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+}
+
+.wiggle-loop {
+    animation: wiggle 0.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+/* Optional: smoother mailbox fade-in */
+#mailbox-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .mailbox-wrapper {
     position: relative;
-    width: 300px; /* adjust as needed */
+    width: 300px;
     max-width: 90%;
 }
 
@@ -290,11 +306,12 @@ footer {
 }
 
 #mailbox-text {
-    font-family: "prestige-elite-std";
+    font-family: 'prestige-elite-std', cursive;
     font-size: 1.8rem;
     position: absolute;
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 1s ease;
+    opacity: 0;
 }

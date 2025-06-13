@@ -34,8 +34,6 @@ function typeEffect() {
             }
         }
     } else {
-        // Stop typing and show mailbox
-        document.getElementById("mailbox-section").classList.add("mailbox-visible");
         // Stop blinking cursor
         textElement.style.animation = "none";
         textElement.style.borderRight = "none";
@@ -72,31 +70,29 @@ function updateText() {
 
 document.addEventListener("DOMContentLoaded", typeEffect);
 
-// Select elements
 const mailboxFlag = document.getElementById("mailbox-flag");
 const mailboxMail = document.getElementById("mailbox-mail");
 const mailboxText = document.getElementById("mailbox-text");
+const mailboxWrapper = document.querySelector(".mailbox-wrapper");
 
 let clickedOnce = false;
 
-// Load video sources
+// Set sources
 mailboxFlag.src = "assets/mailbox-flag.webm";
 mailboxMail.src = "assets/mailbox-mail.webm";
 
-// Scroll into view → start animation + show text
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-    if (entry.isIntersecting) {
-        mailboxFlag.play();
-        mailboxText.style.opacity = 1;
-    }
+// Loop wiggle animation with CSS class
+mailboxWrapper.classList.add("wiggle-loop");
+
+// On hover: stop wiggle, play flag, show text
+mailboxWrapper.addEventListener("mouseenter", () => {
+    mailboxWrapper.classList.remove("wiggle-loop");
+    mailboxFlag.play();
+    mailboxText.style.opacity = 1;
 });
-}, { threshold: 0.5 });
 
-observer.observe(document.getElementById("mailbox-section"));
-
-// Handle click interaction
-mailboxFlag.addEventListener("click", () => {
+// On click: switch animation, then redirect
+mailboxWrapper.addEventListener("click", () => {
     if (!clickedOnce) {
         mailboxFlag.style.display = "none";
         mailboxMail.style.display = "block";
@@ -106,4 +102,5 @@ mailboxFlag.addEventListener("click", () => {
         window.location.href = "projects.html";
     }
 });
+
 
