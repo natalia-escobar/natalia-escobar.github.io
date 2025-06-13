@@ -75,6 +75,9 @@ const mailboxFlag = document.getElementById("mailbox-flag");
 const mailboxMail = document.getElementById("mailbox-mail");
 const mailboxText = document.getElementById("mailbox-text");
 
+mailboxFlag.src = "assets/mailbox-flag.webm";
+mailboxMail.src = "assets/mailbox-mail.webm";
+
 let clickedOnce = false;
 
 // Hover → stop wiggle, play flag animation, show text
