@@ -296,7 +296,7 @@ footer {
 
 .mailbox-wrapper {
     position: relative;
-    width: 300px;
+    width: 400px;
     max-width: 90%;
 }
 
@@ -307,12 +307,15 @@ footer {
 }
 
 #mailbox-text {
-    white-space: nowrap;
-    font-family: 'prestige-elite-std', cursive;
-    font-size: 1.8rem;
     position: absolute;
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
-    transition: opacity 1s ease;
+    font-family: 'prestige-elite-std';
+    font-size: 1.8rem;
+    white-space: nowrap;
+    color: #002eff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
 }
