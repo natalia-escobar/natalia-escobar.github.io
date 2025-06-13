@@ -70,30 +70,32 @@ function updateText() {
 
 document.addEventListener("DOMContentLoaded", typeEffect);
 
-const mailboxWiggle = document.getElementById("mailbox-wiggle");
-const mailboxFlagup = document.getElementById("mailbox-flagup");
+const mailboxWrapper = document.querySelector(".mailbox-wrapper");
+const mailboxFlag = document.getElementById("mailbox-flag");
 const mailboxMail = document.getElementById("mailbox-mail");
 const mailboxText = document.getElementById("mailbox-text");
 
 let clickedOnce = false;
 
-// On hover: play flag-up animation
-mailboxWiggle.addEventListener("mouseenter", () => {
-    mailboxWiggle.style.display = "none";
-    mailboxFlagup.style.display = "block";
-    mailboxFlagup.play();
+// Hover → stop wiggle, play flag animation, show text
+mailboxWrapper.addEventListener("mouseenter", () => {
+    mailboxWrapper.classList.remove("wiggle");
+    
+    mailboxFlag.currentTime = 0;
+    mailboxFlag.play();
     mailboxText.style.opacity = 1;
 });
 
-// On click: play mail animation or redirect
-mailboxFlagup.addEventListener("click", () => {
+// Click → switch to mail animation or go to projects
+mailboxFlag.addEventListener("click", () => {
     if (!clickedOnce) {
-        mailboxFlagup.style.display = "none";
+        mailboxFlag.style.display = "none";
         mailboxMail.style.display = "block";
+        mailboxMail.currentTime = 0;
         mailboxMail.play();
-        clickedOnce = true;
-    } else {
-        window.location.href = "projects.html";
-    }
+    clickedOnce = true;
+} else {
+    window.location.href = "projects.html";
+}
 });
 

@@ -263,14 +263,14 @@ footer {
     max-width: 800px; /* Adjust width */
 }
 
-#mailbox-flag.wiggle {
-    animation: wiggle 2s ease-in-out infinite;
+@keyframes subtleWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
 }
 
-@keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(0.6deg); }
-    75% { transform: rotate(-0.6deg); }
+.wiggle {
+    animation: subtleWiggle 2s infinite ease-in-out;
 }
 
 #mailbox-flag.flag-up {
