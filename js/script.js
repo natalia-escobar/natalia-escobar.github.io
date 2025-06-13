@@ -76,8 +76,8 @@ const mailboxText = document.getElementById("mailbox-text");
 let clickedOnce = false;
 
 // Load video sources
-mailboxFlag.src = "media/mailbox-flag.webm";
-mailboxMail.src = "media/mailbox-mail.webm";
+mailboxFlag.src = "assets/mailbox-flog.webm";
+mailboxMail.src = "assets/mailbox-mail.webm";
 
 // Scroll into view → start animation + show text
 const observer = new IntersectionObserver((entries) => {
