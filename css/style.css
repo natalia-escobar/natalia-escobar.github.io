@@ -263,16 +263,6 @@ footer {
     max-width: 800px; /* Adjust width */
 }
 
-/* Mailbox is hidden initially */
-#mailbox-section {
-    opacity: 0;
-    transition: opacity 1.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 /* Wiggle animation */
 @keyframes wiggle {
     0%, 100% { transform: rotate(0deg); }
