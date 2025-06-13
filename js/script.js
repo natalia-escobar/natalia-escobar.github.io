@@ -112,4 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const word = document.getElementById("mailbox-word");
         word.style.opacity = 1;
     });
+
+    // Click on mailboxMail → go to projects
+    mailboxMail.addEventListener("click", () => {
+        window.location.href = "projects.html";
+    });
 });
