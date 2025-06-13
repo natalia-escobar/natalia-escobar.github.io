@@ -34,9 +34,13 @@ function typeEffect() {
             }
         }
     } else {
-        // Start deleting all lines after all phrases are typed
-        isDeleting = true;
-        setTimeout(deleteEffect, 1000); // Pause before deleting
+        // Stop typing and show mailbox
+        document.getElementById("mailbox-section").classList.add("mailbox-visible");
+        // Stop blinking cursor
+        textElement.style.animation = "none";
+        textElement.style.borderRight = "none";
+
+        return;
     }
 }
 
