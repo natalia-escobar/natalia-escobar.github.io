@@ -82,17 +82,17 @@ mailboxFlag.src = "assets/mailbox-flag.webm";
 mailboxMail.src = "assets/mailbox-mail.webm";
 
 // Loop wiggle animation with CSS class
-mailboxWrapper.classList.add("wiggle-loop");
+mailboxWrapper.classList.add("wiggle");
 
-// On hover: stop wiggle, play flag, show text
-mailboxWrapper.addEventListener("mouseenter", () => {
-    mailboxWrapper.classList.remove("wiggle-loop");
+// On hover: stop wiggle, play flag animation, show text
+mailboxFlag.addEventListener("mouseenter", () => {
+    mailboxFlag.classList.remove("wiggle");
     mailboxFlag.play();
     mailboxText.style.opacity = 1;
 });
 
-// On click: switch animation, then redirect
-mailboxWrapper.addEventListener("click", () => {
+// On click: swap to mail animation, then link to projects
+mailboxFlag.addEventListener("click", () => {
     if (!clickedOnce) {
         mailboxFlag.style.display = "none";
         mailboxMail.style.display = "block";
