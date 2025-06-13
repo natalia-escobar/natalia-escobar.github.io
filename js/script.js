@@ -70,35 +70,36 @@ function updateText() {
 
 document.addEventListener("DOMContentLoaded", typeEffect);
 
-const mailboxWrapper = document.querySelector(".mailbox-wrapper");
-const mailboxFlag = document.getElementById("mailbox-flag");
-const mailboxMail = document.getElementById("mailbox-mail");
-const mailboxText = document.getElementById("mailbox-text");
+document.addEventListener("DOMContentLoaded", () => {
+    const mailboxWrapper = document.querySelector(".mailbox-wrapper");
+    const mailboxFlag = document.getElementById("mailbox-flag");
+    const mailboxMail = document.getElementById("mailbox-mail");
+    const mailboxText = document.getElementById("mailbox-text");
+        
+    mailboxFlag.src = "assets/mailbox-flag.webm";
+    mailboxMail.src = "assets/mailbox-mail.webm";
 
-mailboxFlag.src = "assets/mailbox-flag.webm";
-mailboxMail.src = "assets/mailbox-mail.webm";
+    let clickedOnce = false;
 
-let clickedOnce = false;
-
-// Hover → stop wiggle, play flag animation, show text
-mailboxWrapper.addEventListener("mouseenter", () => {
-    mailboxWrapper.classList.remove("wiggle");
+    // Hover → stop wiggle, play flag animation, show text
+    mailboxWrapper.addEventListener("mouseenter", () => {
+        mailboxWrapper.classList.remove("wiggle");
     
-    mailboxFlag.currentTime = 0;
-    mailboxFlag.play();
-    mailboxText.style.opacity = 1;
-});
+        mailboxFlag.currentTime = 0;
+        mailboxFlag.play();
+        mailboxText.style.opacity = 1;
+    });
 
-// Click → switch to mail animation or go to projects
-mailboxFlag.addEventListener("click", () => {
-    if (!clickedOnce) {
-        mailboxFlag.style.display = "none";
-        mailboxMail.style.display = "block";
-        mailboxMail.currentTime = 0;
-        mailboxMail.play();
-    clickedOnce = true;
-} else {
-    window.location.href = "projects.html";
-}
+    // Click → switch to mail animation or go to projects
+    mailboxFlag.addEventListener("click", () => {
+        if (!clickedOnce) {
+            mailboxFlag.style.display = "none";
+            mailboxMail.style.display = "block";
+            mailboxMail.currentTime = 0;
+            mailboxMail.play();
+        clickedOnce = true;
+    } else {
+        window.location.href = "projects.html";
+    }
+    });
 });
-
