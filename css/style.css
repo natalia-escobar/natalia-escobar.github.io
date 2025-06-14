@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: "new-kansas-swash", sans-serif;
+    font-family: "new-kansas", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.6;
@@ -17,10 +17,12 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* creates left/right alignment */
+    justify-content: space-between; /* pushes name left, links right */
     align-items: center;
+    width: 100%;
     padding: 20px 40px;
     background-color: #f9f9f9;
+    box-sizing: border-box; /* makes padding count toward full width */
 }
 
 .site-name {
@@ -28,17 +30,21 @@ body {
     font-size: 2.2rem;
     color: #0000ff;
     text-decoration: none;
+    text-align: left;
+    flex-shrink: 0;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
-    font-family: 'new-kansas-swash';
+    font-family: 'new-kansas';
     color: #242325;
     text-decoration: none;
     font-size: 1.1rem;
@@ -62,12 +68,12 @@ nav ul li a:hover {
 }
 
 #name {
-    font-family: "prestige-elite-std", sans-serif;
+    font-family: 'Cedarville Cursive', sans-serif;
     color: #000500;
     font-size: 3rem;
 }
 #typing-text {
-    font-family: "ff-providence-sans-web-pro", sans-serif;
+    font-family: "new-kansas", sans-serif;
     color: #002eff; /* Choose a highlight color */
     font-size: 3rem;
     font-weight: bold;
