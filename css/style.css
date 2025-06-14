@@ -76,9 +76,10 @@ nav ul li a:hover {
 }
 #typing-text {
     font-family: "new-kansas", sans-serif;
+    font-weight: 300;
     color: #002eff; /* Choose a highlight color */
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: regular;
     border-right: 2px solid #002eff; /* Blinking cursor effect */
     padding-right: 5px;
     animation: blink 0.7s infinite;
@@ -328,7 +329,7 @@ footer {
 
 .mailbox-wrapper {
     position: relative;
-    width: 500px;       /* Adjust this as needed */
+    width: 700px;       /* Adjust this as needed */
     max-width: 90vw;    /* Responsive max width */
     margin: 0 auto;     /* Center horizontally */
 }
