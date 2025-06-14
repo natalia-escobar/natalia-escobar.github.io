@@ -49,7 +49,7 @@ body {
     font-style: regular;
     color: #242325;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     padding: 10px;
     transition: color 0.3s;
 }
@@ -59,14 +59,20 @@ nav ul li a:hover {
 }
 #hero {
     background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
+    padding: 80px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: right;
 }
 
-#hero h1 {
-    font-size: 1.5rem;
-    text-align: left;
-    margin-top: 5vh;
+.hero-paragraph{
+    font-family: 'new-kansas';
+    font-weight: 300;
+    font-style: regular;
+    color: #242325;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
 }
 
 #name {
