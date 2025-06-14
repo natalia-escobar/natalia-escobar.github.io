@@ -7,8 +7,8 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: "new-kansas", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 300;
+    font-style: regular;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
@@ -45,6 +45,8 @@ body {
 
 .nav-links li a {
     font-family: 'new-kansas';
+    font-weight: 300;
+    font-style: regular;
     color: #242325;
     text-decoration: none;
     font-size: 1.1rem;
