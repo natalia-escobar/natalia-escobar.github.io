@@ -59,8 +59,8 @@ nav ul li a:hover {
 }
 #hero {
     background-color: #f9f9f9;
-    width: 75vw;
-    margin-left: 25vw;
+    width: 80vw;
+    margin-left: 20vw;
     margin-top: 80px;
     text-align: right;
     padding: 0 40px 0 0;
@@ -344,7 +344,7 @@ footer {
     position: relative;
     width: 760px;       /* Adjust this as needed */
     max-width: 90vw;    /* Responsive max width */
-    margin: 200px auto 40px auto;     /* Center horizontally */
+    margin: 200px 0 40px auto;     /* Center horizontally */
 }
 
 .mailbox-wrapper video {
