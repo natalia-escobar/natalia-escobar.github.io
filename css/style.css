@@ -63,7 +63,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 80px auto 10px auto;
-    text-align: right;
+    text-align: center;
     padding: 0 40px;
 }
 
@@ -345,7 +345,7 @@ footer {
     position: relative;
     width: 760px;       /* Adjust this as needed */
     max-width: 90vw;    /* Responsive max width */
-    margin: 200px 0 40px auto;     /* Center horizontally */
+    margin-top: 200px;     /* Center horizontally */
 }
 
 .mailbox-wrapper video {
