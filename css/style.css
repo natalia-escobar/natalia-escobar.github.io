@@ -293,7 +293,7 @@ footer {
     justify-content: center; 
     align-items: center;
     margin: 40px auto; /* Adds space around */
-    max-width: 800px; /* Adjust width */
+    width: 100%; /* Adjust width */
 }
 
 @keyframes subtleWiggle {
