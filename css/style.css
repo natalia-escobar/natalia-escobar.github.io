@@ -72,7 +72,7 @@ nav ul li a:hover {
     font-style: regular;
     color: #242325;
     line-height: 1.6;
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .hero-paragraph:first-of-type {
@@ -344,7 +344,7 @@ footer {
     position: relative;
     width: 700px;       /* Adjust this as needed */
     max-width: 90vw;    /* Responsive max width */
-    margin: 0 auto;     /* Center horizontally */
+    margin: 40px auto;     /* Center horizontally */
 }
 
 .mailbox-wrapper video {
