@@ -75,6 +75,9 @@ nav ul li a:hover {
     font-size: 48px;
 }
 
+.hero-paragraph span {
+    display: block;
+}
 #name {
     font-family: 'Cedarville Cursive', sans-serif;
     color: #000500;
