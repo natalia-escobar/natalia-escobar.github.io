@@ -57,13 +57,14 @@ body {
 nav ul li a:hover {
     color: #0000ff;
 }
+
 #hero {
     background-color: #f9f9f9;
-    width: 80vw;
-    margin-left: 20vw;
-    margin-top: 80px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 10px auto;
     text-align: right;
-    padding: 0 40px 0 0;
+    padding: 0 40px;
 }
 
 .hero-paragraph{
