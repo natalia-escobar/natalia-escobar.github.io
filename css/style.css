@@ -61,8 +61,9 @@ nav ul li a:hover {
     background-color: #f9f9f9;
     width: 75vw;
     margin-left: 25vw;
+    margin-top: 80px;
     text-align: right;
-    padding: 0 25px 0 0;
+    padding: 0 40px 0 0;
 }
 
 .hero-paragraph{
@@ -72,6 +73,10 @@ nav ul li a:hover {
     color: #242325;
     line-height: 1.6;
     font-size: 48px;
+}
+
+.hero-paragraph:first-of-type {
+    margin-bottom: 40px;
 }
 
 .hero-paragraph span {
