@@ -344,7 +344,7 @@ footer {
     position: relative;
     width: 700px;       /* Adjust this as needed */
     max-width: 90vw;    /* Responsive max width */
-    margin: 40px auto;     /* Center horizontally */
+    margin: 100px auto 40px auto;     /* Center horizontally */
 }
 
 .mailbox-wrapper video {
