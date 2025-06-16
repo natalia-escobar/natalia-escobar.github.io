@@ -328,11 +328,11 @@ footer {
 
 #mailbox-text {
     position: absolute;
-    top: -40px;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
     font-family: "new-kansas-swash";
-    font-size: 1.8rem;
+    font-size: 30px;
     white-space: nowrap;
     color: #002eff;
     opacity: 0;
@@ -344,7 +344,7 @@ footer {
     position: relative;
     width: 760px;       /* Adjust this as needed */
     max-width: 90vw;    /* Responsive max width */
-    margin: 300px auto 40px auto;     /* Center horizontally */
+    margin: 200px auto 40px auto;     /* Center horizontally */
 }
 
 .mailbox-wrapper video {
