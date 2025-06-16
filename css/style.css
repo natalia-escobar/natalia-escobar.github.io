@@ -59,11 +59,10 @@ nav ul li a:hover {
 }
 #hero {
     background-color: #f9f9f9;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 25px;
+    width: 75vw;
+    margin-left: 25vw;
     text-align: right;
+    padding: 0 25px 0 0;
 }
 
 .hero-paragraph{
