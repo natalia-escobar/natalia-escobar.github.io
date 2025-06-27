@@ -363,19 +363,17 @@ footer {
 
 .postcard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
     gap: 28px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-.postcard img {
+.postcard-img {
     width: 100%;
-    max-width: 500px; /* adjust if you want uniform sizing */
     height: auto;
     display: block;
-    margin: 0 auto;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
 }
