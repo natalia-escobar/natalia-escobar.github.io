@@ -354,3 +354,33 @@ footer {
     display: block;
     pointer-events: auto; /* Ensure videos can be clicked/hovered */
 }
+
+.projects-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.postcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.postcard {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* adjust based on your actual postcard image ratio */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+
+.postcard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
