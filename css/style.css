@@ -363,7 +363,7 @@ footer {
 
 .postcard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Adjust as needed */
     gap: 28px;
     max-width: 1000px;
     margin: 0 auto;
