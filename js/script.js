@@ -117,4 +117,19 @@ document.addEventListener("DOMContentLoaded", () => {
     mailboxMail.addEventListener("click", () => {
         window.location.href = "projects.html";
     });
+
+    // 👇 Add new flip script here
+    const flipCards = document.querySelectorAll('.js-flip');
+    flipCards.forEach(card => {
+        const inner = card.querySelector('.flip-inner');
+        card.addEventListener('mouseenter', () => {
+            document.querySelectorAll('.flip-inner.flipped').forEach(f => {
+                if (f !== inner) f.classList.remove('flipped');
+            });
+            inner.classList.add('flipped');
+        });
+        card.addEventListener('mouseleave', () => {
+            inner.classList.remove('flipped');
+        });
+    });
 });
