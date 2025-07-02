@@ -379,6 +379,8 @@ footer {
 
 .postcard-flip {
     perspective: 1000px;
+    position: relative;
+    height: 300px;
 }
 
 .flip-inner {
