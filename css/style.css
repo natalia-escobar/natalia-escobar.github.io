@@ -391,6 +391,13 @@ footer {
     transition: transform 0.6s ease;
 }
 
+.flip-inner img {
+    backface-visibility: hidden;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .flip-inner.flipped {
     transform: rotateY(180deg);
 }
