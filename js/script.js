@@ -47,22 +47,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // === Postcard Flip (only on projects page) ===
-    if (path.endsWith("projects.html")) {
-        const flipCards = document.querySelectorAll('.js-flip');
-        flipCards.forEach(card => {
-            const inner = card.querySelector('.flip-inner');
+    if (window.location.pathname.endsWith("projects.html")) {
+        const flipCards = document.querySelectorAll(".js-flip");
+    
+        flipCards.forEach((card) => {
+            const inner = card.querySelector(".flip-inner");
             if (!inner) return;
-
-            card.addEventListener('mouseenter', () => {
-                document.querySelectorAll('.flip-inner.flipped').forEach(f => {
-                    if (f !== inner) f.classList.remove('flipped');
-                });
-                inner.classList.add('flipped');
+            card.addEventListener("mouseenter", () => {
+            // remove flipped class from others
+            document.querySelectorAll(".flip-inner.flipped").forEach((f) => {
+                if (f !== inner) f.classList.remove("flipped");
             });
-
-            card.addEventListener('mouseleave', () => {
-                inner.classList.remove('flipped');
-            });
+            inner.classList.add("flipped");
+        });
+    
+        card.addEventListener("mouseleave", () => {
+            inner.classList.remove("flipped");
+        });
         });
     }
 });
