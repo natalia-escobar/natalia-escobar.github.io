@@ -380,7 +380,7 @@ footer {
 .postcard-flip {
     perspective: 1000px;
     position: relative;
-    height: auto;
+    height: 500px;
 }
 
 .postcard-flip a {
@@ -394,6 +394,7 @@ footer {
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.6s ease;
+    display: block;
 }
 
 .flip-inner.flipped {

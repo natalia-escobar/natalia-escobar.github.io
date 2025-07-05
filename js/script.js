@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // === Postcard Flip (only on projects page) ===
-    if (window.location.pathname.endsWith("projects.html")) {
+    if (window.location.pathname.includes("projects.html")) {
         const flipCards = document.querySelectorAll(".js-flip");
     
         flipCards.forEach((card) => {
