@@ -46,24 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // === Postcard Flip (only on projects page) ===
-    if (window.location.pathname.includes("projects.html")) {
-        const flipCards = document.querySelectorAll(".js-flip");
-    
-        flipCards.forEach((card) => {
-            const inner = card.querySelector(".flip-inner");
-            if (!inner) return;
-            card.addEventListener("mouseenter", () => {
-            // remove flipped class from others
-            document.querySelectorAll(".flip-inner.flipped").forEach((f) => {
-                if (f !== inner) f.classList.remove("flipped");
-            });
-            inner.classList.add("flipped");
+    //to appear when scrolling on projects page
+
+    const cards = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        }
         });
-    
-        card.addEventListener("mouseleave", () => {
-            inner.classList.remove("flipped");
-        });
-        });
-    }
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => observer.observe(card));
+
 });
