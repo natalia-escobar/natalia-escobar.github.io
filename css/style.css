@@ -15,6 +15,7 @@ body {
     text-align: center;
 }
 
+
 .navbar {
     display: flex;
     justify-content: space-between; /* pushes name left, links right */
@@ -110,56 +111,6 @@ footer {
     text-align: center;
     padding: 20px 0;
     background-color: #f9f9f9;
-}
-
-.envelope-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.envelope-container a {
-    text-decoration: none; /* Remove underline from links */
-    display: block; /* Ensure the anchor tag behaves like a block */
-    position: relative; /* Enable positioning context for hover effects */
-}
-
-.envelope {
-    position: relative; /* Enable positioning context for child elements */
-    width: 500px; /* Set your desired width */
-    height: auto; /* Keeps aspect ratio */
-    cursor: pointer;
-    overflow: hidden; /* Prevents any overflow if necessary */
-    display: block;
-}
-
-.envelope-front,
-.envelope-back {
-    width: 100%; /* Ensure the images fill the envelope width */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: contain; /* Scale images without cutting off */
-}
-
-.envelope-back {
-    position: absolute; /* Position absolutely within the envelope */
-    top: 0; /* Align with the top */
-    left: 0; /* Align with the left */
-    width: 100%; /* Cover the entire envelope */
-    height: 100%; /* Cover the entire envelope */
-    display: none; /* Hide by default */
-    justify-content: center; /* Center text vertically */
-    align-items: center; /* Center text horizontally */
-    text-align: center; /* Center text */
-}
-
-.envelope:hover .envelope-front {
-    display: none; /* Hide front image on hover */
-}
-
-.envelope:hover .envelope-back {
-    display: flex; /* Show back image and text on hover */
 }
 
 .entry-title {
@@ -285,7 +236,7 @@ footer {
 }
 
 .project-card {
-    background: white;
+    background: #002eff;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
