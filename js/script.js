@@ -60,4 +60,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => observer.observe(card));
 
+    // ScrollSpy logic
+const tocLinks = document.querySelectorAll('.toc a');
+const sectionIds = Array.from(tocLinks).map(link => link.getAttribute('href'));
+
+    window.addEventListener('scroll', () => {
+        let currentId = '';
+        sectionIds.forEach(id => {
+        const section = document.querySelector(id);
+        if (section && section.getBoundingClientRect().top < window.innerHeight / 2) {
+            currentId = id;
+        }
+        });
+
+        tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentId) {
+            link.classList.add('active');
+        }
+        });
+    });
+
 });

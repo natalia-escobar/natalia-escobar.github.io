@@ -405,3 +405,53 @@ footer {
 .flip-back {
     transform: rotateY(180deg);
 }
+
+.project-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.toc {
+    width: 220px;
+    position: sticky;
+    top: 100px;
+    margin-right: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px dashed #ccc;
+    background: #f7f7f7;
+    font-size: 0.9rem;
+    height: fit-content;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc a {
+    display: block;
+    padding: 6px 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.toc a:hover {
+    color: #8884d8;
+}
+
+.toc a.active {
+    color: #4c5fd5;
+    font-weight: bold;
+}
+
+.project-content {
+    max-width: 750px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
