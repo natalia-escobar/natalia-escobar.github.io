@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/ejk2abx.css"> <!-- interface -->
     <link rel="stylesheet" href="https://use.typekit.net/zeq2iim.css"> <!-- new kansas -->
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> <!-- Cedarville Cursive -->
+    <link rel="stylesheet" href="https://use.typekit.net/zeq2iim.css"> <!-- dm sans-->
 </head>
 <body>
     <header>
@@ -28,14 +29,17 @@
 
     </header>
 
-    <main class="project-layout">
-        <aside class="toc">
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#prototyping">Prototyping</a></li>
-            </ul>
-        </aside>
+    <div class="section-dropdown">
+        <button class="dropdown-toggle">
+            <span id="current-section">Overview</span>
+            <span class="arrow">&#9662;</span> <!-- ▼ triangle -->
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#prototyping">Prototyping</a></li>
+        </ul>
+    </div>
 
         <section>
             <section class="project-header">

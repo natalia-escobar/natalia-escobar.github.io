@@ -60,25 +60,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => observer.observe(card));
 
-    // ScrollSpy logic
-const tocLinks = document.querySelectorAll('.toc a');
-const sectionIds = Array.from(tocLinks).map(link => link.getAttribute('href'));
+// === ScrollSpy for Dropdown Menu ===
+const dropdown = document.querySelector('.section-dropdown');
+const dropdownToggle = dropdown?.querySelector('.dropdown-toggle');
+const currentSection = dropdown?.querySelector('#current-section');
+const dropdownMenu = dropdown?.querySelector('.dropdown-menu');
+const dropdownLinks = dropdownMenu?.querySelectorAll('a');
+
+if (dropdown && dropdownToggle && currentSection && dropdownMenu && dropdownLinks) {
+    // Close/open dropdown on click
+    dropdownToggle.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Update section title when user clicks a link
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const text = link.textContent || '';
+            currentSection.textContent = text;
+            dropdownMenu.classList.remove('show'); // Close menu after click
+        });
+    });
+
+    // ScrollSpy to update section title based on scroll
+    const sectionIds = Array.from(dropdownLinks).map(link => link.getAttribute('href'));
 
     window.addEventListener('scroll', () => {
         let currentId = '';
         sectionIds.forEach(id => {
-        const section = document.querySelector(id);
-        if (section && section.getBoundingClientRect().top < window.innerHeight / 2) {
-            currentId = id;
-        }
+            const section = document.querySelector(id);
+            if (section && section.getBoundingClientRect().top < window.innerHeight / 2) {
+                currentId = id;
+            }
         });
 
-        tocLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === currentId) {
-            link.classList.add('active');
+        if (currentId) {
+            const activeLink = Array.from(dropdownLinks).find(link => link.getAttribute('href') === currentId);
+            if (activeLink) {
+                currentSection.textContent = activeLink.textContent || '';
+            }
         }
-        });
     });
+
+    // Optional: Close dropdown if user clicks outside
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+}
 
 });
