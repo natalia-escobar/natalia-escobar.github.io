@@ -449,6 +449,10 @@ footer {
     padding: 0;
 }
 
+.dropdown-menu.show {
+    display: block;
+}
+
 .dropdown-menu li a {
     display: block;
     padding: 0.5rem 1rem;
