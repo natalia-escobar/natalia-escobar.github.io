@@ -6,14 +6,42 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: "new-kansas", sans-serif;
+    font-family: "dm-sans", sans-serif;
     font-weight: 300;
     font-style: regular;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
-    text-align: center;
+    text-align: left;
 }
+
+h1 {
+    font-family: "new-kansas", sans-serif;
+    text-align: left;
+    font-weight: 600;
+    font-style: normal;
+    color: #333;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: "new-kansas", sans-serif;
+    text-align: left;
+    font-weight: 600;
+    font-style: normal;
+    color: #333;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: "new-kansas", sans-serif;
+    text-align: left;
+    font-weight: 300;
+    font-style: italic;
+    color: #333;
+    font-size: 1.5rem;
+}
+
 
 
 .navbar {
