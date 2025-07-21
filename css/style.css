@@ -221,42 +221,6 @@ footer {
     margin-bottom: 40px; /* Space between sections */
 }
 
-
-/* Left Column - Section Title */
-.section-title {
-    text-align: right; /* Align title to the right */
-    font-size: 1.8em;
-    font-weight: bold;
-    width: 35%;
-    padding-right: 40px;
-    margin-left: 80px;
-}
-
-/* Right Column - Content */
-.section-content {
-    display: block; /* Removes flex restrictions */
-    text-align: left;
-    width: 100%; /* Takes up the whole page */
-    max-width: 100%; /* Ensures no extra space */
-    margin: 0; /* Removes any unwanted centering */
-    padding-left: 20px; /* Adds a slight buffer from the left edge */
-    font-family: "interface", monospace !important;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.section-content h3 {
-    font-family: "ff-providence-sans-web-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.section-content img {
-    width: 100%; /* Ensure images fit inside column */
-    height: auto; /* Keep aspect ratio */
-    margin-top: 10px;
-}
-
 /*trying new proj template */
 .project-sections {
     max-width: 900px;
@@ -524,4 +488,22 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+/* text-fade in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
