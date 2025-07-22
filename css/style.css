@@ -512,3 +512,13 @@ html {
     margin: 0 auto;
     padding: 2rem 1rem;
 }
+
+.bulletin-background {
+    background-image: url('../assets/bulletin-background.png'); /* update path as needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 2rem; /* add some padding for breathing room */
+    min-height: 100vh; /* ensures full vertical height if needed */
+}
