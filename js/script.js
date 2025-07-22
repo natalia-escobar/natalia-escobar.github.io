@@ -46,38 +46,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //to appear when scrolling on projects page
+    // fade-in & out logic
 
-    const cards = document.querySelectorAll(".fade-in");
+    const faders = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
+            entry.target.classList.add("visible");
+        } else {
+        entry.target.classList.remove("visible"); // fade-out on scroll out
         }
-        });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => observer.observe(card));
-
-    const faders = document.querySelectorAll('.fade-in');
-
-    const appearOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
     });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
+    }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
     });
+
+    faders.forEach(fader => observer.observe(fader));
+
 
 // === ScrollSpy for Dropdown Menu ===
     const dropdown = document.querySelector('.section-dropdown');
