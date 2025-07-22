@@ -493,7 +493,18 @@ html {
 /* text-fade in effect */
 .fade-in {
     opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     transform: translateY(20px);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in.invisible {
+    opacity: 0.1; /* or 0 if you want a full fade-out */
+    transform: translateY(10px);
 }
 
 .section-wrapper {

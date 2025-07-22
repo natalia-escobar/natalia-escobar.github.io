@@ -50,28 +50,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const faders = document.querySelectorAll('.fade-in');
 
-    const observer = new IntersectionObserver((entries) => {
+    const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-        const ratio = entry.intersectionRatio;
-
         if (entry.isIntersecting) {
-        // Gradually fade in as it enters
-        entry.target.style.opacity = ratio;
-        entry.target.style.transform = `translateY(${20 * (1 - ratio)}px)`;
+            entry.target.classList.add('visible');
+            entry.target.classList.remove('invisible');
         } else {
-        // When completely out of view, reset
-        entry.target.style.opacity = 0;
-        entry.target.style.transform = `translateY(20px)`;
+        entry.target.classList.remove('visible');
+        entry.target.classList.add('invisible');
         }
     });
-    }, {
-    threshold: Array.from({length: 101}, (_, i) => i / 100) // thresholds from 0 to 1
-    });
+    }, { threshold: 0.1 });
 
     faders.forEach(fader => {
-        fader.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-        observer.observe(fader);
+        fadeObserver.observe(fader);
     });
+
 
 // === ScrollSpy for Dropdown Menu ===
     const dropdown = document.querySelector('.section-dropdown');
