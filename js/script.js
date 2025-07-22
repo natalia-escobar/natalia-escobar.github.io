@@ -51,20 +51,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const faders = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+        entries.forEach(entry => {
+        const ratio = entry.intersectionRatio;
+
         if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+        // Gradually fade in as it enters
+        entry.target.style.opacity = ratio;
+        entry.target.style.transform = `translateY(${20 * (1 - ratio)}px)`;
         } else {
-        entry.target.classList.remove("visible"); // fade-out on scroll out
+        // When completely out of view, reset
+        entry.target.style.opacity = 0;
+        entry.target.style.transform = `translateY(20px)`;
         }
     });
     }, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: Array.from({length: 101}, (_, i) => i / 100) // thresholds from 0 to 1
     });
 
-    faders.forEach(fader => observer.observe(fader));
-
+    faders.forEach(fader => {
+        fader.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        observer.observe(fader);
+    });
 
 // === ScrollSpy for Dropdown Menu ===
     const dropdown = document.querySelector('.section-dropdown');
