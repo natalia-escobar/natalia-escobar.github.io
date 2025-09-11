@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Under Construction!</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ejk2abx.css"> <!-- lores-12 -->
     <link rel="stylesheet" href="https://use.typekit.net/ejk2abx.css"> <!-- source sans pro -->
@@ -12,174 +12,64 @@
     <link rel="stylesheet" href="https://use.typekit.net/ejk2abx.css"> <!-- permanent marker -->
     <link rel="stylesheet" href="https://use.typekit.net/zeq2iim.css"> <!-- new kansas -->
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> <!-- Cedarville Cursive -->
+    <link href="https://api.fontshare.com/v2/css?f[]=zodiak@100,101,300,301,400,401,700&f []=comico@400&display=s wap" rel="stylesheet"> <!-- Zodiak & Comico-->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #fdfdfd;
+            font-family: "Zodiak", serif;
+            text-align: center;
+            color: #333;
+        }
 
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: wiggle 1.5s infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            75% { transform: rotate(-10deg); }
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: #0077b6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff6600;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class = "site-name">Natalia Escobar</a>
-            <ul class="nav-links">
-                <li><a href="assets/NataliaEscobar-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="side-quests.html">Side Quests</a></li>
-                <li><a href="about-me.html">About Me</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="hero">
-        <p class = "hero-paragraph">
-            <span>Natalia Escobar is a <i>creative problem solver</i>, passionate about</span> 
-            <span><b>sustainability</b>, curious about <b>material innovation</b>, a</span>
-            <span>storyteller, all wrapped into one <b><i>designer</i></b>.</span>
-        </p>     <!-- <span id="typing-text"></span></h1> old typing text thing -->
-        <p class="hero-paragraph">
-            <span>She completed her Bachelor of Science in <b>Physics</b></span>
-            <span>and <b>Computer Science</b> at <i>Duke University</i>. She wanted to expand</span>
-            <span>her problem-solving mindset and sharpen her creative toolkit,</span>
-            <span> so she completed her Masters of Arts in <b>Design Engineering</b></span> 
-            <span>at <i>Brown University</i> and <i>Rhode Island School of Design</i>.</span>
-        </p>
-        
-    </section>
-    <section id="mailbox-section">
-        <div class="mailbox-wrapper wiggle">
-            <video
-                id="mailbox-flag"
-                muted
-                playsinline
-                preload="auto"
-                style="display: block;"
-            ></video>
-            <video
-                id="mailbox-mail"
-                muted
-                playsinline
-                preload="auto"
-                style="display: none;"
-            ></video>
-            <p id="mailbox-text" style="opacity: 0;">
-                You've got... <span id="mailbox-word" style="opacity: 0;">mail. Click it to read more!</span>
-            </p>
-        </div>
-    </section>
-    <!-- old envelopes on landing page -->
-    
-    <!-- <section id="projects-preview"> -->
-        <!-- <div class="envelope-container"> -->
-            <!-- hmg Envelope -->
-            <!-- <a href="projects/hmg.html" class="envelope"> -->
-                <!-- <div class="envelope"> -->
-                <!-- <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-                <div class="envelope-back">
-                    <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                    <div class="entry-text">Ongoing</div>
-                    <div class="entry-title">Hyundai x RISD</div>
-                </div> -->
-                <!-- </div> -->
-            <!-- </a> -->
-    
-            <!-- Sproutopia Envelope -->
-            <!-- <a href="projects/sproutopia.html" class="envelope"> -->
-                <!-- <div class="envelope"> -->
-                <!-- <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-                <div class="envelope-back">
-                    <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                    <div class="entry-text">Winter 2025</div>
-                    <div class="entry-title">Sproutopia</div>
-                </div> -->
-                <!-- </div> -->
-            <!-- </a> -->
-    
-            <!-- ChopSmart Envelope -->
-            <!-- <a href="projects/chopsmart.html" class="envelope"> -->
-                <!-- <div class="envelope"> -->
-                <!-- <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-                <div class="envelope-back">
-                    <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                    <div class="entry-text">Fall 2024</div>
-                    <div class="entry-title">ChopSmart</div>
-                </div> -->
-                <!-- </div> -->
-            <!-- </a> -->
-
-            <!-- Sneaker Envelope -->
-            <!-- <a href="projects/sneaker.html" class="envelope"> -->
-                <!-- <div class="envelope"> -->
-                <!-- <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-                <div class="envelope-back">
-                    <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                    <div class="entry-text">Fall 2024</div>
-                    <div class="entry-title">Bio-Fabricated Sneaker</div>
-                </div> -->
-                <!-- </div> -->
-            <!-- </a> -->
-
-            <!-- Toki Envelope -->
-            <!-- <a href="projects/toki.html" class="envelope"> -->
-                <!-- <div class="envelope"> -->
-                <!-- <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-                <div class="envelope-back">
-                    <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                    <div class="entry-text">Summer 2024</div>
-                    <div class="entry-title">Toki's Song</div>
-                </div> -->
-                <!-- </div> -->
-            <!-- </a> -->
-
-            <!-- PathsUp2 Envelope -->
-            <!-- <a href="projects/pathsup2.html" class="envelope"> -->
-                <!-- <div class="envelope"> -->
-                <!-- <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-                <div class="envelope-back">
-                    <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                    <div class="entry-text">Summer 2021</div>
-                    <div class="entry-title">Paths-Up: Optical Device</div>
-                </div> -->
-                <!-- </div> -->
-            <!-- </a> -->
-
-            <!-- Duke Envelope -->
-            <!-- <a href="projects/sidis.html" class="envelope">
-                <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-                <div class="envelope-back">
-                    <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                    <div class="entry-text">Summer 2022</div>
-                    <div class="entry-title">SIDIS Simulation</div>
-                </div>
-            </a> -->
-
-            <!-- PathsUp1 Envelope -->
-            <!-- <a href="projects/pathsup1.html" class="envelope">
-            <img src="assets/envelope_front.png" alt="Closed Envelope" class="envelope-front">
-            <div class="envelope-back">
-                <img src="assets/envelope_back.png" alt="Back of Envelope" class="envelope-back">
-                <div class="entry-text">Summer 2019</div>
-                <div class="entry-title">Finger-based Blood Pressure Monitor</div>
-            </div>
-            </a>
-    
-        </div>
-    </section>    -->
-        
-    <!-- <section id="projects-preview">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-item">
-                <a href="projects/project1.html">
-                    <img src="assets/project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="projects/project2.html">
-                    <img src="assets/project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                </a>
-            </div>
-        </div>
-    </section> -->
-    
+    <div class="icon">🛠️</div>
+    <h1>I'm working hard to get this site up and running with my updated work.</h1>
+    <p>
+        While you wait, please check out my 
+        <a href="https://www.tinyfol.io/natalia-escobar" target="_blank">tiny.folio</a> 
+        to get a glimpse of my work, or chat with me on 
+        <a href="https://www.linkedin.com/in/natalia-escobar1/" target="_blank">LinkedIn</a>.
+    </p>
     
     <footer>
         <p>&copy; 2025 coded by Natalia</p>
