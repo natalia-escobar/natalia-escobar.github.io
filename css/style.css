@@ -66,11 +66,14 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    position: absolute;
+    top: 25%;
+    left: 15%;
 }
 
 .speech-bubble {
     position: relative;
-    flex: 1
+    width: fit-content;
 }
 
 .hero-image {
