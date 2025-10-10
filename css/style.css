@@ -11,6 +11,8 @@
     width: 100%;
     padding: 1.5rem 3rem; /* adjust as needed */
     background-color: #FFFFFF;
+    margin: 0;
+    position: relative;
 }
 
 .navbar .home-button {
