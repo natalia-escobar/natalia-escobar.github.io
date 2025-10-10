@@ -68,7 +68,12 @@ body {
     line-height: normal;
 }
 
-hero-image {
+.speech-bubble {
+    position: relative;
+    flex: 1
+}
+
+.hero-image {
     width: 71rem;
     height: 45.4375rem;
     flex-shrink: 0;
@@ -99,7 +104,7 @@ footer {
 }
 
 .footer-line {
-    width: 87.5rem;
+    width: 95vh;
     height: 0.0625rem;
     background: #FAF3E0;
 
