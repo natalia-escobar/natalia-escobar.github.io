@@ -7,3 +7,49 @@
     font-weight: 400;
     line-height: normal;
 }
+
+.nav-group {
+    color: #4B3935;
+    text-align: center;
+    font-family: 'Zodiak';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #FAF3E0;
+        font-family: "Zodiak", serif;
+        text-align: center;
+        color: #4B3935;
+}
+
+
+        h1 {
+            font-family: 'Comico', cursive;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: #4B3935;
+            font-family: 'New Kansas', sans-serif;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #950606;
+        }
