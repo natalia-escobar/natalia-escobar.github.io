@@ -80,6 +80,7 @@ body {
     width: 71rem;
     height: 45.4375rem;
     flex-shrink: 0;
+    transform: scaleX(-1);
 }
 
 
