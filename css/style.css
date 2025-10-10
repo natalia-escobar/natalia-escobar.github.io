@@ -68,7 +68,7 @@ body {
     line-height: normal;
     position: absolute;
     top: 25%;
-    left: 15%;
+    left: 25%;
 }
 
 .speech-bubble {
@@ -107,7 +107,8 @@ footer {
 }
 
 .footer-line {
-    width: 95vh;
+    width: 98vh;
+    margin: 0 auto;
     height: 0.0625rem;
     background: #FAF3E0;
 
