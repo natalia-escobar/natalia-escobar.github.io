@@ -1,8 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between; /* home left, menu group right */
     align-items: center;
-    padding: 1rem 2rem;
+    width: 100%;
+    padding: 1.5rem 3rem; /* adjust as needed */
+    background-color: #FFFFFF;
 }
 
 .navbar .home-button {
@@ -13,14 +21,15 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    white-space: nowrap;
 }
 
 .nav-group {
     display: flex;
+    justify-content: flex-end;
+    align-items: none;
     gap: 3rem; /* evenly spaced menu items */
     list-style: none; /* remove bullet points */
-    margin: 0; /* remove default list margin */
-    padding: 0; /* remove default list padding */
 }
 
 .nav-group a {
@@ -31,6 +40,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    white-space: nowrap;
 }
 
 .nav-group a:hover {
@@ -44,20 +54,36 @@ body {
         align-items: center;
         height: 100vh;
         margin: 0;
-        background: #FAF3E0;
+        background: #FFFFFF;
         font-family: "Zodiak", serif;
         text-align: center;
         color: #4B3935;
 }
 
 
-        h1 {
-            font-family: 'Comico', cursive;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+h1 {
+    font-family: 'Comico', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-        p {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* making it responsive */
+@media (max-width: 800px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-group {
+        flex-basis: 100%;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+}
