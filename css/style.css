@@ -53,9 +53,7 @@
 body {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         margin: 0;
         background: #FFFFFF;
         font-family: "Zodiak", serif;
@@ -70,9 +68,28 @@ h1 {
     margin-bottom: 1rem;
 }
 
-p {
+footer {
+    width: 90rem;
+    height: 11.3125rem;
+    flex-shrink: 0;
+    background: #950606;
+}
+
+p .code-tag {
+    color: #FAF3E0;
+    text-align: center;
+    font-family: Comico;
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-line {
+    width: 87.5rem;
+    height: 0.0625rem;
+    background: #FAF3E0;
+
 }
 
 /* making it responsive */
