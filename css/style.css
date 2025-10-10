@@ -82,7 +82,7 @@ h1 {
 }
 
 footer {
-    width: 90rem;
+    width: 100vw;
     height: 11.3125rem;
     flex-shrink: 0;
     background: #950606;
