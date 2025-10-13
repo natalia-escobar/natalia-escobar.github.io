@@ -83,6 +83,12 @@ body {
     transform: scaleX(-1) translateX(-300px);
 }
 
+.mini-me {
+    width: 6.5625rem;
+    height: 10.5625rem;
+    flex-shrink: 0;
+}
+
 
 h1 {
     font-family: 'Comico', cursive;
