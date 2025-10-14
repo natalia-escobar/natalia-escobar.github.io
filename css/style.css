@@ -95,7 +95,7 @@ body {
     flex-shrink: 0;
     position: absolute;
     top: 680px;
-    left: 300px;
+    left: 330px;
 }
 
 .hero-section::after {
