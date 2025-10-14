@@ -87,7 +87,7 @@ body {
     width: 6.5625rem;
     height: 10.5625rem;
     flex-shrink: 0;
-    transform: translateX(100px) translateY(-50px);
+    transform: translateX(-100px) translateY(100px);
 }
 
 
