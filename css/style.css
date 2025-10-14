@@ -60,9 +60,7 @@ body {
 
 .hero-section {
     position: relative;
-    width: 90rem;
-    height: 45.6875rem;
-    flex-shrink: 0;
+    width: 100%;
     background: #FFFFFF;
 }
 
@@ -100,6 +98,11 @@ body {
     left: 250px;
 }
 
+.hero-section::after {
+    content: "";
+    display: block;
+    height: 12rem; /* or however tall your mini-me extends beyond the bubble */
+}
 
 h1 {
     font-family: 'Comico', cursive;
