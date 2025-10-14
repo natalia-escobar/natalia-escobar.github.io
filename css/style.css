@@ -58,6 +58,10 @@ body {
         background: #FFFFFF;
 }
 
+.hero-section {
+    position: relative;
+}
+
 .hero-text {
     width: 40.0625rem;
     color: #000;
@@ -87,7 +91,9 @@ body {
     width: 6.5625rem;
     height: 10.5625rem;
     flex-shrink: 0;
-    transform: translateX(-100px) translateY(100px);
+    position: absolute;
+    top: 10%;
+    left: 10%;
 }
 
 
