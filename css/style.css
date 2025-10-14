@@ -60,6 +60,7 @@ body {
 
 .hero-section {
     position: relative;
+    background: #FFFFFF;
 }
 
 .hero-text {
@@ -92,8 +93,8 @@ body {
     height: 10.5625rem;
     flex-shrink: 0;
     position: absolute;
-    top: 400px;
-    left: 50px;
+    top: 650px;
+    left: 120px;
 }
 
 
