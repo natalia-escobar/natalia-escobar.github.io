@@ -127,7 +127,13 @@ body {
     height: 52.4375rem;
     flex-shrink: 0;
     position: absolute;
-    top: -200px;
+    top: -100px;
+}
+
+.card-visible {
+    width: 43.75rem;
+    height: 41.9375rem;
+    aspect-ratio: 700/671;
 }
 
 h1 {
