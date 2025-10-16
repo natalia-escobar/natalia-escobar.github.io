@@ -127,7 +127,7 @@ body {
     height: 52.4375rem;
     flex-shrink: 0;
     position: absolute;
-    top: -100px;
+    top: 0;
 }
 
 .card-visible {
