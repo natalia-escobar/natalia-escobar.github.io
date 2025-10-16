@@ -120,14 +120,15 @@ body {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    margin-bottom: 1rem;
 }
 
 .rope-background {
     width: 154.9375rem;
     height: 52.4375rem;
     flex-shrink: 0;
-    position: absolute;
-    top: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .card-visible {
