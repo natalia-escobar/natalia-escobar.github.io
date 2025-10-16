@@ -121,6 +121,12 @@ body {
     line-height: normal;
 }
 
+.rope-background {
+    width: 154.9375rem;
+    height: 52.4375rem;
+    flex-shrink: 0;
+}
+
 h1 {
     font-family: 'Comico', cursive;
     font-size: 1.5rem;
