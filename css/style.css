@@ -106,6 +106,7 @@ body {
 
 .project-preview {
     background: #FFFFFF;
+    position: relative;
 }
 
 .project-text {
@@ -125,6 +126,8 @@ body {
     width: 154.9375rem;
     height: 52.4375rem;
     flex-shrink: 0;
+    position: absolute;
+    top: -200px;
 }
 
 h1 {
