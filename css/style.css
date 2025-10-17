@@ -107,6 +107,8 @@ body {
 .project-preview {
     background: #FFFFFF;
     position: relative;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .project-text {
@@ -129,6 +131,8 @@ body {
     flex-shrink: 0;
     position: relative;
     z-index: 1;
+    top: -1rem;
+    
 }
 
 .card-visible {
