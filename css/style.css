@@ -137,10 +137,19 @@ body {
 
 }
 
+.card-scroll {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
 .card-visible {
     width: 43.75rem;
     height: 41.9375rem;
     aspect-ratio: 700/671;
+    position: absolute;
+    top: -5rem;
+    z-index: 3;
 }
 
 h1 {
