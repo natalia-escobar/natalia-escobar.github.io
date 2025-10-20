@@ -172,12 +172,12 @@ body {
 }
 
 .arrow.left {
-    left: 55%;
+    left: 5%;
     transform: scaleX(-1);
 }
 
 .arrow.right {
-    right: 55%;
+    right: 5%;
 }
 
 h1 {
