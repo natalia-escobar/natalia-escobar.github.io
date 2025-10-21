@@ -18,21 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
         newCard.src = cards[index];
         newCard.classList.add("card-visible");
 
-  // Start off-screen depending on direction
-        newCard.classList.add(direction === "right" ? "slide-in-right" : "slide-in-left");
-
+        // Start off-screen but hidden until old card starts moving
+        newCard.style.opacity = "0";
         cardScroll.appendChild(newCard);
 
-        if (oldCard) {
-    // Animate old card out
-            oldCard.classList.add(direction === "right" ? "slide-out-left" : "slide-out-right");
+        // Force browser to register DOM addition before applying animation
+    requestAnimationFrame(() => {
+      // Apply correct slide-in direction after one frame
+        newCard.classList.add(direction === "right" ? "slide-in-right" : "slide-in-left");
+        newCard.style.opacity = "1";
+        });
 
-    // Remove it after animation ends
-            setTimeout(() => {
-                oldCard.remove();
-        // then fade in the new card
-                newCard.style.animationDelay = "0.1s";
-            }, 600);
+        if (oldCard) {
+        // Animate old card out
+        oldCard.classList.add(direction === "right" ? "slide-out-left" : "slide-out-right");
+
+        // Wait for the old card's animation to finish before removing
+        oldCard.addEventListener("animationend", () => oldCard.remove(), { once: true });
         }
     }
 
