@@ -136,6 +136,10 @@ body {
     top: -17rem;
 
 }
+.card-scroll-wrapper {
+    position: relative;
+    top: -48rem; 
+}
 
 .card-scroll {
     position: relative;
@@ -148,8 +152,71 @@ body {
     height: 41.9375rem;
     aspect-ratio: 700/671;
     position: absolute;
-    top: -48rem;
     z-index: 3;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideInFromLeft 0.6s forwards ease;
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInFromRight 0.6s forwards ease;
+}
+
+.slide-out-left {
+    animation: slideOutToLeft 0.6s forwards ease;
+}
+
+.slide-out-right {
+    animation: slideOutToRight 0.6s forwards ease;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
 }
 
 .arrow {
