@@ -158,21 +158,21 @@ body {
 .slide-in-left {
     transform: translateX(-100%);
     opacity: 0;
-    animation: slideInFromLeft 1s cubic-bezier(0.45, 0, 0.55, 1);
+    animation: slideInFromLeft 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
 }
 
 .slide-in-right {
     transform: translateX(100%);
     opacity: 0;
-    animation: slideInFromRight 1s cubic-bezier(0.45, 0, 0.55, 1);
+    animation: slideInFromRight 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
 }
 
 .slide-out-left {
-    animation: slideOutToLeft 1s cubic-bezier(0.45, 0, 0.55, 1);
+    animation: slideOutToLeft 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
 }
 
 .slide-out-right {
-    animation: slideOutToRight 1s cubic-bezier(0.45, 0, 0.55, 1);
+    animation: slideOutToRight 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
 }
 
 @keyframes slideInFromLeft {
