@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = [
         "assets/chopsmart-card-withclip.png",
         "assets/coro-card-withclip.png",
-        "assets/sneaker-cardwithclip.png"
+        "assets/sneaker-card-withclip.png"
     ];
 
     let currentIndex = 0;
