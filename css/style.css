@@ -151,6 +151,7 @@ body {
     width: 463px; 
     height: 399px;
     display: block;
+    position: relative;
 }
 
 .pop-up-proj-description {
