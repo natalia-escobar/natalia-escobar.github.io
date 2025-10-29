@@ -152,6 +152,30 @@ body {
     height: 399px;
     display: block;
 }
+
+.pop-up-proj-description {
+    font-style: 'Zodiak', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    font-style: light;
+    text-align: center;
+    color: #000000;
+}
+
+.pop-up-tags {
+    font-style: 'Zodiak', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    font-style: light;
+    text-align: center;
+    color: #950606;
+    -webkit-text-stroke: 1px #950606;
+    text-shadow:
+        -1px -1px 0 #950606,
+        1px -1px 0 #950606,
+        -1px  1px 0 #950606,
+        1px  1px 0 #950606;
+}
 .card-scroll-wrapper {
     position: relative;
     top: -48rem;
