@@ -58,6 +58,8 @@ body {
         background: #FFFFFF;
 }
 
+/* home page styling */
+
 .hero-section {
     position: relative;
     width: 100%;
@@ -137,6 +139,19 @@ body {
 
 }
 
+.pop-up {
+    position: absolute;
+    top: 50%; 
+    left: 80%; 
+    transform: translate(-50%, -50%);
+    z-index: 4; 
+}
+
+.pop-up img {
+    width: 463px; 
+    height: 399px;
+    display: block;
+}
 .card-scroll-wrapper {
     position: relative;
     top: -48rem; 
