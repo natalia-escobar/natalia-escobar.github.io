@@ -142,8 +142,8 @@ body {
 
 .pop-up {
     position: absolute;
-    top: 120%;
-    left: 60%;
+    top: 150%;
+    left: 65%;
     z-index: 4; 
 }
 
