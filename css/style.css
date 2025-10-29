@@ -154,7 +154,8 @@ body {
 }
 .card-scroll-wrapper {
     position: relative;
-    top: -48rem; 
+    top: -48rem;
+    overflow: visible; 
 }
 
 .card-scroll {
