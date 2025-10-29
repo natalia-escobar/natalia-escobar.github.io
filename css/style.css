@@ -24,6 +24,7 @@
     font-weight: 400;
     line-height: normal;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .nav-group {
@@ -141,8 +142,6 @@ body {
 
 .pop-up {
     position: absolute;
-    top: 50%; 
-    left: 80%; 
     transform: translate(-50%, -50%);
     z-index: 4; 
 }
