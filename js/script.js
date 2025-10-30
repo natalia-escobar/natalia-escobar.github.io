@@ -1,15 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     const cards = [
-        "assets/chopsmart-card-withclip.png",
-        "assets/coro-card-withclip.png",
-        "assets/sneaker-card-withclip.png"
+        {img: "assets/chopsmart-card-withclip.png", description: "a smart cutting board for gen z, it’s like living in ratatouille", tags: "smart-products"},
+        {img: "assets/coro-card-withclip.png", description: "a system of wearable devices to make group fitness spaces more inclusive for Deaf/Hard of Hearing participants", tags: "inclusive design" },
+        {img: "assets/sneaker-card-withclip.png", description: "I made a bio-fabricated sneaker in 8 weeks, and I can actually wear them!", tags: "bio-materials"}
     ];
 
     let currentIndex = 0;
     const cardScroll = document.querySelector(".card-scroll");
     const leftArrow = document.querySelector(".arrow.left");
     const rightArrow = document.querySelector(".arrow.right");
+    const popUp = document.querySelector(".pop-up");
+    const popUpImg = popUp.querySelector("img");
+    const popUpDesc = popUp.querySelector(".pop-up-proj-description");
+    const popUpTags = popUp.querySelector(".pop-up-tags");
 
     function showCard(index, direction = "right") {
         const oldCard = document.querySelector(".card-visible");
@@ -36,6 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // Wait for the old card's animation to finish before removing
         oldCard.addEventListener("animationend", () => oldCard.remove(), { once: true });
         }
+
+        popUpDesc.textContent = cards[index].description;
+        popUpTags.textContent = cards[index].tags;
+        popUp.style.opacity = "0";
+
+        // 🐭 Show popup on hover
+        newCard.addEventListener("mouseenter", () => {
+            popUp.style.opacity = "1";
+        });
+
+        // 🐭 Hide popup when hover ends
+        newCard.addEventListener("mouseleave", () => {
+        popUp.style.opacity = "0";
+        });
     }
 
     function nextCard() {

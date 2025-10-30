@@ -147,6 +147,8 @@ body {
     z-index: 4; 
     width: 463px; 
     height: 399px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }
 
 .pop-up img {
