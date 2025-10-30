@@ -180,7 +180,8 @@ body {
     position: absolute;
     top: 65%;
     left: 50%;
-    transform: translate(-60%, -50%);
+    transform: translate(-50%, -50%);
+    word-spacing: 0.5rem;
     display: inline-block;
 }
 .card-scroll-wrapper {
