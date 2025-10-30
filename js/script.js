@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const oldCard = document.querySelector(".card-visible");
 
         const newCard = document.createElement("img");
-        newCard.src = cards[index];
+        newCard.src = cards[index].img;
         newCard.classList.add("card-visible");
 
         // Start off-screen but hidden until old card starts moving
