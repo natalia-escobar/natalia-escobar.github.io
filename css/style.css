@@ -181,6 +181,7 @@ body {
     top: 65%;
     left: 50%;
     transform: translate(-60%, -50%);
+    display: inline-block;
 }
 .card-scroll-wrapper {
     position: relative;
