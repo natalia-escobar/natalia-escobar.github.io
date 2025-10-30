@@ -182,7 +182,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     word-spacing: 0.5rem;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    white-space: nowrap;
 }
 .card-scroll-wrapper {
     position: relative;

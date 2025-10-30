@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         popUpDesc.textContent = cards[index].description;
-        popUpTags.textContent = cards[index].tags.join(" · ");
+        popUpTags.innerHTML = cards[index].tags
+            .map(tag => `<span class="tag">${tag}</span>`)
+            .join(" ");
         popUp.style.opacity = "0";
 
         // 🐭 Show popup on hover
