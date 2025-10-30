@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     const cards = [
-        {img: "assets/chopsmart-card-withclip.png", description: "a smart cutting board for gen z, it’s like living in ratatouille", tags: "smart-products"},
+        {img: "assets/chopsmart-card-withclip.png", description: "a smart cutting board for gen z, it’s like living in <i>ratatouille</i>", tags: "smart-products"},
         {img: "assets/coro-card-withclip.png", description: "a system of wearable devices to make group fitness spaces more inclusive for Deaf/Hard of Hearing participants", tags: "inclusive design" },
         {img: "assets/sneaker-card-withclip.png", description: "I made a bio-fabricated sneaker in 8 weeks, and I can actually wear them!", tags: "bio-materials"}
     ];
