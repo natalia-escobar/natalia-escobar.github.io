@@ -42,10 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         popUpDesc.textContent = cards[index].description;
-        popUpTags.innerHTML = cards[index].tags
-            .map(tag => `<span class="tag">${tag}</span>`)
-            .join(" ");
-        popUp.style.opacity = "0";
+        const tags = cards[index].tags;
+        popUpTags.innerHTML = `
+            <span>${tags[0]}</span>
+            <span>${tags[1]}</span><br>
+            <span>${tags[2]}</span>
+        `;
+        
 
         // 🐭 Show popup on hover
         newCard.addEventListener("mouseenter", () => {

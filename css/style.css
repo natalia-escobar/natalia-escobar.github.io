@@ -175,18 +175,20 @@ body {
     font-weight: 300;
     font-size: 18px;
     font-style: light;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     color: #950606;
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-    word-spacing: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.8;
+    width: 100%;
+}
+
+.pop-up-tags span {
+    margin: 0 1.5rem; 
+    display: inline-block;
 }
 
 .tag {
