@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     const cards = [
-        {img: "assets/chopsmart-card-withclip.png", description: "a smart cutting board for gen z, it’s like living in ratatouille", tags: ["smart-products", "user-research","circular design"]},
-        {img: "assets/coro-card-withclip.png", description: "a system of wearable devices to make group fitness spaces more inclusive for Deaf/Hard of Hearing participants", tags: ["inclusive design", "wearable devices", "haptics"] },
-        {img: "assets/sneaker-card-withclip.png", description: "I made a bio-fabricated sneaker in 8 weeks, and I can actually wear them!", tags: ["bio-materials", "circular design", "material exploration"]}
+        {img: "assets/chopsmart-card-withclip.png", description: "a smart cutting board for gen z, it’s like living in ratatouille", tags: ["smart-products", "user-research","circular design"], link: "projects/chopsmart.html"},
+        {img: "assets/coro-card-withclip.png", description: "a system of wearable devices to make group fitness spaces more inclusive for Deaf/Hard of Hearing participants", tags: ["inclusive design", "wearable devices", "haptics"], link: "projects/coro.html" },
+        {img: "assets/sneaker-card-withclip.png", description: "I made a bio-fabricated sneaker in 8 weeks, and I can actually wear them!", tags: ["bio-materials", "circular design", "material exploration"], link: "projects/coro.html"}
     ];
 
     let currentIndex = 0;
@@ -22,12 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
         newCard.src = cards[index].img;
         newCard.classList.add("card-visible");
 
+        // Add click navigation
+        newCard.style.cursor = "pointer";
+        newCard.addEventListener("click", () => {
+            window.location.href = cards[index].link;
+        });
+
         // Start off-screen but hidden until old card starts moving
         newCard.style.opacity = "0";
         cardScroll.appendChild(newCard);
 
         // Force browser to register DOM addition before applying animation
-    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
       // Apply correct slide-in direction after one frame
         newCard.classList.add(direction === "right" ? "slide-in-right" : "slide-in-left");
         newCard.style.opacity = "1";
